@@ -1,0 +1,104 @@
+
+ ✔ creacion del bloc @done (21-10-13 11:00)
+ ✔ creacion de preguntas y respuetas @done (21-10-13 11:24)
+ ✔  factorizar las vistas y crear tema base  para empezar @done (21-10-16 05:45)
+ ✔  vistas de  panel de administraciom @done (21-10-16 05:45)
+ ✔  vistas cliente @done (21-10-16 05:45)
+ ✔  vistas de  template front @done (21-10-16 05:46)
+ ✔  vista index @done (21-10-16 05:46)
+ ✔  vista ayuda @done (21-10-16 05:46)
+ ✔  vista de intercambio @done (21-10-16 05:46)
+ ✔  vista  de blog @done (21-10-16 05:46)
+ ✔  diferenciar el login del Admin del sitip @done (21-10-16 05:48)
+ ✔  implementacion  de index @done (21-10-25 06:54)
+ ✔ implementacion de blog @done (21-10-25 06:54)
+ ✔  implementacion de ayuda @done (21-10-25 06:54)
+ ✔  implementacion de intercambios @done (21-10-25 06:54)
+ ☐  integracion de logueo  sitio
+ ☐  15 de noviembre
+
+
+TAREA:
+ ☐  DISEÑO DE MOCKUP   -LUISA MARIA
+ ☐  REVISAR MOCKUP DE COWORKING  --GENERAL
+ ☐  REVICION DE DOCUMENTOS --GENERAL
+ ☐  AÑADIR LOGIN PARA LAS VISTAS --CARLOS
+ ☐  INTEGRACION DE INTERCAMBIOS Y SERVICIOS --LUIS
+ ☐  INTEGRACION AYUDA (PREGUNTAS RESPUESTAS) FRONT Y ADMIN --MARCELO
+ ☐  INTEGRACION BLOG FRONT  --MARCELO
+ ☐  calculadora de ikigais (urgente)
+ vistas:
+     multi auth:
+     ☐ perfil
+     ☐ login
+     ☐ registro
+     ☐ sumatoria de puntos
+ ☐ home informacion
+ ☐ intercambio
+ ☐  ayuda
+ ☐  blog
+tablas:
+
+   ☐ user
+    - name
+   - email
+   - email_verified_at
+   - password
+   - avatar
+   - rol (administrador, socios, invitados)
+   - estatus
+   - number_cell
+   - code_refernces_friends
+   - banner
+   - fecha de nacimiento
+   - país (api de Google)
+   - moneda habitual
+   - Genero
+   - Presentacion general
+   - count like
+   - count dislike
+
+   ☐ ikigais
+   - count
+   - count_mony
+   - user_id
+
+   ☐ question-and-answers
+   - question
+   - answer
+   - order
+
+   ☐ comments
+   - coment
+   - user_id
+   - blog_id
+   - count_like
+   - count_dislike
+
+   ☐ blogs
+   - title
+   - content
+   - url_info
+   - url_img
+   - resumen
+   - user_id
+
+   ☐ productos
+   - title
+   - resumen
+   - imagen
+   - user id
+   - amount
+   - id categoría
+
+
+   ☐ Usuario Productos y Servicios
+-    Id servicio o producto
+-    Id usuario
+
+   ☐ categoria
+   - name
+   - status
+   - type (servicio, producto)
+
+

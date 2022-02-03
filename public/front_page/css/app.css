@@ -1,0 +1,206 @@
+/** segundoo background-image: url("https://demo.themexbd.com/rtl/alternat/wp-content/uploads/2021/06/disti-process-s.png");
+opacity: 1;
+transition: background 0.3s, border-radius 0.3s, opacity 0.3s;*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+/*! Guide color */
+:root {
+    --primary-color: #2ad2c9;
+    --secundary-color: #005670;
+    --background-dark: #001328;
+    --text-color-background-white: #444444;
+    --text-background-dark: #ffffff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    background: var(--background-dark);
+    color: var(--text-background-dark);
+    font-weight: 100;
+    background-image: url("https://demo.themexbd.com/rtl/alternat/wp-content/uploads/2021/06/share-ico-shape.png");
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+/** css header */
+/*? bootstrap change class */
+.bg-dark {
+    background-color: var(--secundary-color) !important;
+}
+.header .navbar-nav .nav-link {
+    font-weight: 500;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em;
+}
+
+.navbar-logo {
+    height: 3em;
+    padding-left: 1em;
+}
+/** css banner wefu*/
+.banner-wefu .carousel-item {
+    position: relative;
+}
+.banner-wefu .carousel-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 86, 112, 0.3);
+}
+.slider-content {
+    background-image: url("https://demo.themexbd.com/rtl/alternat/wp-content/uploads/2021/06/disti-process-s.png");
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+}
+.banner-wefu .carousel-item img {
+    height: 270px;
+}
+.content-text p {
+    font-size: 1.1em;
+    line-height: 19px;
+    font-weight: 300;
+}
+.content-text h2,
+h2 {
+    position: relative;
+}
+h2 {
+    display: inline-block;
+    margin: 0 auto;
+}
+.content-text h2::before,
+h2::before {
+    content: " ";
+    position: absolute;
+    bottom: 0px;
+    height: 3px;
+    width: 50%;
+    left: 10%;
+    background-color: var(--primary-color);
+}
+.carousel-caption h5 {
+    font-size: 3em;
+}
+.owl-carousel .item img {
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--secundary-color);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #fff;
+    background-color: var(--secundary-color);
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+#scrollUp {
+    background: #46bdf4 none repeat scroll 0% 0;
+    bottom: 30px;
+    color: #fff;
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+    right: 100px;
+    text-align: center;
+    border-radius: 5px;
+    width: 40px;
+    animation: witr_bounce 800ms ease-out infinite;
+}
+/** Estilos de imagenes para los extos */
+.cont-img {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.que_es {
+    background-image: url("../img/11.png");
+}
+.como-funciona {
+    background-image: url("../img/8.png");
+}
+.noticias {
+    background-image: url("../img/3.png");
+}
+.footer {
+    background-color: var(--secundary-color);
+    color: var(--text-background-dark);
+    font-weight: 300;
+    line-height: 19px;
+    font-size: 0.8em;
+}
+.footer .list-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer .list-menu ul li a {
+    color: var(--text-background-dark);
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.footer .list-menu ul li a:hover {
+    text-decoration: none;
+    color: var(--text-background-dark);
+}
+.footer-text {
+    background-color: var(--text-color-background-white);
+    color: var(--text-background-dark);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+.footer-text p {
+    margin-bottom: 0;
+    text-align: center;
+}
+/*! Card theme */
+
+.card {
+    background-color: var(--secundary-color);
+    color: var(--text-background-dark);
+}
+.asaid-noticias {
+    display: flex;
+    flex-direction: column;
+}
+.conten-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-body .card-text {
+    font-weight: 300;
+}
+.image-card {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,232 @@
+.border-box(@box : border-box) {
+	-webkit-box-sizing: @box;
+	-moz-box-sizing: 	@box;
+	-ms-box-sizing: 	@box;
+	box-sizing: 		@box;
+	
+}
+.font-size(@size: 1) {
+	@pixel : @size * @fontSize;
+	font-size: @pixel;
+	font-size: ~"@{size}rem";
+}
+.bg-size(@size){
+	-webkit-background-size: 	@size;
+	-moz-background-size: 		@size;
+	-o-background-size: 			@size;
+	background-size: 				@size;
+}
+.clearfix {
+	*zoom : 1;
+	&:before, &:after {
+		display: table;
+		content : ""; 
+	}
+	&:after {
+		clear : both; 
+	} 
+}
+.titulo-especial {
+	text-align: center;
+	color: @primario;
+	text-transform: uppercase;
+	&::after {
+		content: '';		
+		margin: 3px auto;
+		display: block;
+		width: 10%;
+		height: 3px;
+		background-color: @primario;
+		vertical-align: middle;
+	}
+}
+.transition(@propiedad, @duracion, @funcion, @retardo) {
+	-webkit-transition: @propiedad ~"@{duracion}s" @funcion ~"@{retardo}s";
+	-moz-transition: 	@propiedad ~"@{duracion}s" @funcion ~"@{retardo}s";
+	-o-transition: 		@propiedad ~"@{duracion}s" @funcion ~"@{retardo}s";
+	transition: 		@propiedad ~"@{duracion}s" @funcion ~"@{retardo}s";
+}
+.transition(@propiedad, @duracion, @funcion) {
+	-webkit-transition: @propiedad ~"@{duracion}s" @funcion;
+	-moz-transition: 	@propiedad ~"@{duracion}s" @funcion;
+	-o-transition: 		@propiedad ~"@{duracion}s" @funcion;
+	transition: 		@propiedad ~"@{duracion}s" @funcion;
+}
+.transition(@propiedad, @duracion) {
+	-webkit-transition: @propiedad ~"@{duracion}s";
+	-moz-transition: 	@propiedad ~"@{duracion}s";
+	-o-transition: 		@propiedad ~"@{duracion}s";
+	transition: 		@propiedad ~"@{duracion}s";
+}
+.transition(@propiedad, @duracion, @funcion, @retardo, @propiedad2, @duracion2, @funcion2, @retardo2) {
+	-webkit-transition: @propiedad ~"@{duracion}s" @funcion ~"@{retardo}s", @propiedad2 ~"@{duracion2}s" @funcion2 ~"@{retardo2}s";
+	-moz-transition: 	@propiedad ~"@{duracion}s" @funcion ~"@{retardo}s", @propiedad2 ~"@{duracion2}s" @funcion2 ~"@{retardo2}s";
+	-o-transition: 		@propiedad ~"@{duracion}s" @funcion ~"@{retardo}s", @propiedad2 ~"@{duracion2}s" @funcion2 ~"@{retardo2}s";
+	transition: 		@propiedad ~"@{duracion}s" @funcion ~"@{retardo}s", @propiedad2 ~"@{duracion2}s" @funcion2 ~"@{retardo2}s";
+}
+.sombra(@ejeX: 0, @ejeY: 0, @desenf: 4, @propaga: 0, @alpha: 0.5) {
+	-webkit-box-shadow: ~"@{ejeX}px @{ejeY}px @{desenf}px @{propaga}px rgba(0,0,0,@{alpha})";
+	-moz-box-shadow: 	~"@{ejeX}px @{ejeY}px @{desenf}px @{propaga}px rgba(0,0,0,@{alpha})";
+	box-shadow: 		~"@{ejeX}px @{ejeY}px @{desenf}px @{propaga}px rgba(0,0,0,@{alpha})";
+}
+.Invesombra(@ejeX: 0, @ejeY: 0, @desenf: 4, @propaga: 0, @alpha: 0.5) {
+	-webkit-box-shadow: ~"@{ejeX}px @{ejeY}px @{desenf}px @{propaga}px rgba(255,255,255,@{alpha})";
+	-moz-box-shadow: 	~"@{ejeX}px @{ejeY}px @{desenf}px @{propaga}px rgba(255,255,255,@{alpha})";
+	box-shadow: 		~"@{ejeX}px @{ejeY}px @{desenf}px @{propaga}px rgba(255,255,255,@{alpha})";
+}
+.border-radius(@radio : 0px) {
+	-webkit-border-radius: 	@radio;
+	border-radius: 			@radio;
+}
+.opacity(@opa) {
+	@alpha : @opa * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{alpha})";
+	filter: alpha(opacity=@alpha);
+	-khtml-opacity: @opa;
+	-moz-opacity: 	@opa;
+	opacity: 		@opa;
+}
+.position-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	.translate(-50%, -50%);
+}
+.anchoMax {
+	width: @ancho;
+	max-width: @anchoMax;
+	margin-right: auto;
+	margin-left: auto;
+}
+.render-img {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+}
+.translate-x(@mover) {
+	-webkit-transform: 	translateX(@mover);
+	-moz-transform: 	translateX(@mover);
+	-ms-transform: 		translateX(@mover);
+	-o-transform: 		translateX(@mover);
+	transform: 			translateX(@mover);
+}
+.translate-y(@mover) {
+	-webkit-transform: 	translateY(@mover);
+	-moz-transform: 	translateY(@mover);
+	-ms-transform: 		translateY(@mover);
+	-o-transform: 		translateY(@mover);
+	transform: 			translateY(@mover);
+}
+.translate(@mover-x, @mover-y) {
+	-webkit-transform: 	translate(@mover-x, @mover-y);
+	-moz-transform: 	translate(@mover-x, @mover-y);
+	-ms-transform: 		translate(@mover-x, @mover-y);
+	-o-transform: 		translate(@mover-x, @mover-y);
+	transform: 			translate(@mover-x, @mover-y);
+}
+
+.transform(@propiedad) {
+	-webkit-transform: 	@propiedad;
+	-moz-transform: 	@propiedad;
+	-ms-transform: 		@propiedad;
+	-o-transform: 		@propiedad;
+	transform: 			@propiedad;
+}
+
+// Agregamos (...) al texto que queda escondido 
+.text-overflow() {
+overflow : hidden;
+text-overflow : ellipsis;
+white-space : nowrap; }
+
+
+// Esconder texto, para reemplazar con imagen
+.esconder-texto {
+text-indent : 100%;
+white-space : nowrap;
+overflow : hidden; }
+
+// Esconder visualmente del navegador
+.esconder() {
+display : none !important; 
+visibility : hidden; }
+
+// Esconder pero manteniendo el layout
+.invisible() { 
+visibility : hidden; }
+
+
+// Esconder pero dejar visible para navegadores de voz (Screenreaders)
+.visualmenteescondido() { 
+overflow : hidden; 
+position : absolute;
+clip : rect(0 0 0 0); 
+height : 1px; 
+width : 1px;
+margin : -1px; 
+padding : 0; 
+border : 0; }
+
+// Esconder pero permitir hacerle target con el teclado
+.visualmenteescondido.focusable:active, 
+.visualmenteescondido.focusable:focus { 
+position : static;
+clip : auto; 
+height : auto; 
+width : auto;
+margin : 0; 
+overflow: visible; }
+
+// Grid
+.my-grid(@margin : 10px) {
+	display: block;
+	margin: 0 -@margin;
+	text-align: center;
+	.clearfix;
+}
+.my-column(@cols : 12, @padding : 10px) {
+	@ancho : @cols * 100 / 12;
+	width: ~"@{ancho}%";
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 @padding;
+	margin: 10px -2px;
+	text-align: left;
+}
+
+.proporcional(@ancho, @alto) {
+	@porcentaje : @alto * 100 / @ancho;
+	position: relative;
+	overflow: hidden;
+	&::before {
+			content: '';
+			display: block;
+			padding-top: ~"@{porcentaje}%";
+	}
+	> img, > video {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		top: 50%;
+		left: 0;
+		z-index: 10;
+		.translate-y(-50%);
+	}
+}
+
+
+.btn, a.btn {
+	display: inline-block;
+	padding: 8px 15px;
+	// background-color: @primario;
+	border: 2px @primario solid;
+	color: @primario;
+	.border-radius(5px);
+	cursor: pointer;
+	.font-size(1.1);
+	.transition(all, 0.2);
+	&:hover, &:focus {
+		background-color: lighten(@primario, 10);
+		color: @textoClaro;
+	}
+}

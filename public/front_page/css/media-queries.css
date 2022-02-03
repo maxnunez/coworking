@@ -1,0 +1,28 @@
+@media screen and (min-width: 810px) {
+	/** css banner wefu*/
+	.banner-wefu .carousel-item img {
+		height: 600px;
+	}
+  .navbar-logo {
+  height: 4em;
+  padding-left: 2em;
+}
+.footer-text{
+  background-color: var(--text-color-background-white);
+  color:var(--text-background-dark);
+  font-weight:400;
+  font-size:0.8em;
+}
+.footer .list-menu ul li a{
+  color: var(--text-background-dark);
+  font-weight: 500;
+  text-transform: capitalize;
+  color: rgba(255,255,255,.5);
+  text-align: center;
+}
+.footer .list-menu ul{
+  display:flex;
+  justify-content:space-around;
+  align-items: baseline;
+}
+}

@@ -1,0 +1,247 @@
+$(document).ready(function () {
+
+
+    $('#show_notificaciones').click(function (e) {
+        e.preventDefault();
+        if ($('#container-notificaciones').hasClass('show')) {
+             $.get($('#container-notificaciones').attr('ruta'), function (data) {
+                if (data == 'Ok') {
+                    $('.badge.badge-dot.badge-dot-xl.badge-danger').each(function () {
+                        $(this).removeClass('badge-danger');
+                        $(this).css('background-color', 'gray');    
+                    });
+                }
+            });
+        }
+        $('#container-notificaciones').toggleClass('show');
+    })
+
+    // Sidebar Menu
+
+    setTimeout(function () {
+        $(".vertical-nav-menu").metisMenu();
+    }, 100);
+
+    // Search wrapper trigger
+
+    $('.search-icon').click(function () {
+        $(this).parent().parent().addClass('active');
+    });
+
+    $('.search-wrapper .close').click(function () {
+        $(this).parent().removeClass('active');
+    });
+
+    // BS4 Popover
+
+    $('[data-toggle="popover-custom-content"]').each(function (i, obj) {
+
+        $(this).popover({
+            html: true,
+            placement: 'auto',
+            template: '<div class="popover popover-custom" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
+            content: function () {
+                var id = $(this).attr('popover-id');
+                return $('#popover-content-' + id).html();
+            }
+        });
+
+    });
+
+    // Stop Bootstrap 4 Dropdown for closing on click inside
+
+    $('.dropdown-menu').on('click', function (event) {
+        var events = $._data(document, 'events') || {};
+        events = events.click || [];
+        for (var i = 0; i < events.length; i++) {
+            if (events[i].selector) {
+
+                if ($(event.target).is(events[i].selector)) {
+                    events[i].handler.call(event.target, event);
+                }
+
+                $(event.target).parents(events[i].selector).each(function () {
+                    events[i].handler.call(this, event);
+                });
+            }
+        }
+        event.stopPropagation(); //Always stop propagation
+    });
+
+
+    $('[data-toggle="popover-custom-bg"]').each(function (i, obj) {
+
+        var popClass = $(this).attr('data-bg-class');
+
+        $(this).popover({
+            trigger: 'focus',
+            placement: 'top',
+            template: '<div class="popover popover-bg ' + popClass + '" role="tooltip"><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+        });
+
+    });
+
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+
+    $('[data-toggle="popover-custom"]').each(function (i, obj) {
+
+        $(this).popover({
+            html: true,
+            container: $(this).parent().find('.rm-max-width'),
+            content: function () {
+                return $(this).next('.rm-max-width').find('.popover-custom-content').html();
+            }
+        });
+    });
+
+    $('body').on('click', function (e) {
+        $('[rel="popover-focus"]').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+
+    $('.header-megamenu.nav > li > .nav-link').on('click', function (e) {
+        $('[data-toggle="popover-custom"]').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+
+    // BS4 Tooltips
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    $(function () {
+        $('[data-toggle="tooltip-light"]').tooltip({
+            template: '<div class="tooltip tooltip-light"><div class="tooltip-inner"></div></div>'
+        });
+    });
+
+    // Drawer
+
+    $('.open-right-drawer').click(function () {
+        $(this).addClass('is-active');
+        $('.app-drawer-wrapper').addClass('drawer-open');
+        $('.app-drawer-overlay').removeClass('d-none');
+    });
+
+    $('.drawer-nav-btn').click(function () {
+        $('.app-drawer-wrapper').removeClass('drawer-open');
+        $('.app-drawer-overlay').addClass('d-none');
+        $('.open-right-drawer').removeClass('is-active');
+    });
+
+    $('.app-drawer-overlay').click(function () {
+        $(this).addClass('d-none');
+        $('.app-drawer-wrapper').removeClass('drawer-open');
+        $('.open-right-drawer').removeClass('is-active');
+    });
+
+    $('.mobile-toggle-nav').click(function () {
+        $(this).toggleClass('is-active');
+        $('.app-container').toggleClass('sidebar-mobile-open');
+    });
+
+    $('.mobile-toggle-header-nav').click(function () {
+        $(this).toggleClass('active');
+        $('.app-header__content').toggleClass('header-mobile-open');
+    });
+
+    $('.mobile-app-menu-btn').click(function () {
+        $('.hamburger', this).toggleClass('is-active');
+        $('.app-inner-layout').toggleClass('open-mobile-menu');
+    });
+
+    // Responsive
+
+    $(window).on('resize', function () {
+        var win = $(this);
+        if (win.width() < 1250) {
+            $('.app-container').addClass('closed-sidebar-mobile closed-sidebar');
+        } else
+        {
+            $('.app-container').removeClass('closed-sidebar-mobile closed-sidebar');
+        }
+    });
+
+
+    if ($('.alerta-app').is(':visible')) {
+        setTimeout(() => {
+            $('.alerta-app').fadeOut(200);
+        }, 5000);
+    }
+
+    $('.alerta-app > span').click(function () {
+        $('.alerta-app').fadeOut(200);
+    });
+
+    function AlertApp(msg) {
+        $('.alerta-app > p').text(msg);
+        $('.alerta-app').fadeIn(200);
+        setTimeout(() =>  {
+            $('.alerta-app').fadeOut(200);
+        }, 8000);
+    }
+
+    $('.copy-code').click(function () {
+        if ($(this).siblings('input').val() != '') {
+            $(this).siblings('input').select();
+            document.execCommand("copy");
+            AlertApp('Codigo copiado');
+        }else {
+            AlertApp('No hay un codigo de referido');
+        }
+    });
+
+    $(document).on('click', '#consultar-rr',function (e) {
+        e.preventDefault();
+
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass('active');
+            $(this).siblings('.referidos-2').fadeOut(200);
+            $(this).siblings('p').css('transform', 'rotate(0deg)');
+        }else {
+            var id = $(this).attr('item');
+            var token = $('input[name="_token"]').val();
+            var url = $('#url_consulta_referido').val();
+            $(this).parent().addClass('active');
+            $(this).siblings('.referidos-2').fadeIn(200);
+            $(this).siblings('p').css('transform', 'rotate(90deg)');
+            $(this).siblings('.referidos-2').html('<span class="loader"></span>');
+            $.post(url, {
+                _token: token,
+                id: id,
+            }, function (data) {
+                if (data.length > 0) {
+
+                    var html = '';
+                    for (var i = 0; i <= data.length - 1; i++) {
+                        html += '<div class="user-bola">';
+                            html += '<div class="container-avatar">';
+                                html += '<img src="'+$('#url_img').val()+'/'+data[i].avatar+'" alt="'+data[i].name+'">';
+                            html += '</div>';
+                            html += '<span id="consultar-rr" item="'+data[i].id+'">'+data[i].name+'</span>';
+                            html += '<p>⮞</p>';
+                            html += '<div class="referidos-2" id="rr-rr-'+data[i].id+'">';
+                            html += '</div>';
+                        html += '</div>';
+                    }
+                    $('#rr-rr-'+id).html(html);
+                }else {
+                    $('#rr-rr-'+id).html('<span class="nothing">No se encontrarón referidos..</span>');
+                }
+            });
+        }
+
+
+    });
+
+});
+
