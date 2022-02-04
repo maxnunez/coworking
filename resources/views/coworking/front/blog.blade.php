@@ -2,6 +2,7 @@
 @section('content')
 
 {{-- content --}}
+@include('coworking.front.Template.title-page',['title'=>'blogs'])
 @include('coworking.front.Template.listItems',['items'=>$blogs,'model'=>'Blog', 'file'=>'blog_images', 'tag'=>'Blog'])
 {{-- end content --}}
 

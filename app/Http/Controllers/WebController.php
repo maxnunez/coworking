@@ -38,7 +38,7 @@ class WebController extends Controller
     public function help()
     {
         $questions = QuestionAndAnswer::all();
-        return view('coworking.front.help', compact('questions'));
+        return view('coworking.front.ayuda', compact('questions'));
     }
     public function blog()
     {
@@ -88,19 +88,19 @@ class WebController extends Controller
         return view('coworking.front.noticias', compact('news'));
     }
 
-    public function updateUser(Request $request, $id)
-    {
+    // public function updateUser(Request $request, $id)
+    // {
 
-        /*
-        TODO:
-          revisar  el update  desde las vistas con la multi coneccion de basede datos
-        */
-        $user = User::find($id);
-        $fields = $request->all();
+    //     /*
+    //     TODO:
+    //       revisar  el update  desde las vistas con la multi coneccion de basede datos
+    //     */
+    //     $user = User::find($id);
+    //     $fields = $request->all();
 
-        User::updateDataWithMedia($id, $fields);
+    //     User::updateDataWithMedia($id, $fields);
 
 
-        return redirect('/user-perfil');
-    }
+    //     return redirect('/user-perfil');
+    // }
 }

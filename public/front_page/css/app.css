@@ -213,3 +213,7 @@ h2::before {
 .grid-item--width2 {
     width: 40%;
 }
+.bage-question p {
+    color: var(--text-background-dark);
+    font-weight: 400;
+}
