@@ -28,8 +28,8 @@ Route::get('/Ayuda', 'WebController@help')->name('ayuda');
 Route::get('/Blog', 'WebController@blog')->name('blog');
 Route::get('/Noticias', 'WebController@News')->name('noticias');
 
-Route::get('/Blog-Mas/{id}', 'WebController@showBlog');
-Route::get('/News-Mas/{id}', 'WebController@showNews');
+Route::get('/Items-Mas/{id}/{model}', 'WebController@showItems');
+
 Route::get('/Producto-Mas/{id}/{type}', 'WebController@showProduct');
 
 /* Route::group(['middleware' => 'auth'], function () {

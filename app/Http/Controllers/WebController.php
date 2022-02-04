@@ -54,20 +54,18 @@ class WebController extends Controller
         return view('coworking.front.paginaInterna', compact('news', 'product', 'products'));
     }
   
-    public function showBlog($id)
+    public function showItems($id, $model)
     {
-        $blog = Blog::find($id);
-        $blogs = Blog::inRandomOrder()->limit(3)->get();
+        $class = 'App\\'.$model;
+        $item =   $class::find($id);
+        $items = $class::inRandomOrder()->limit(3)->get();
         $news = News::inRandomOrder()->limit(5)->get();
-        return view('coworking.front.blog_page', compact('blog', 'blogs', 'news'));
+
+        $file = ($model == 'News' ) ? 'news_images' : 'blog_images';
+
+        return view('coworking.front.interna', compact('item', 'items', 'news', 'file'));
     }
-    public function showNews($id)
-    {
-        $new = News::find($id);
-        $news = News::inRandomOrder()->limit(5)->get();
-        $newsBut = News::inRandomOrder()->limit(3)->get();
-        return view('coworking.front.news_page', compact('new', 'news', 'newsBut'));
-    }
+    
     /**
      *
      * TODO:
@@ -84,10 +82,10 @@ class WebController extends Controller
     }
     // Funciones  de  Perfil  de  Usuario
 
-    public function userPerfil()
+    public function News()
     {
         $news = News::all();
-        return view('coworking.front.user_perfil', compact('news'));
+        return view('coworking.front.noticias', compact('news'));
     }
 
     public function updateUser(Request $request, $id)

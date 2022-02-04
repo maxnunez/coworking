@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h5 class="card-title text-capitalize">{{ $new->title }}</h5>
                     <p class="card-text">{{ $new->abstract }}</p>
-                    <a href="" class="btn btn-primary">Leer Mas</a>
+                    <a href="{{ url('Items-Mas/'.$new->id.'/News') }}" class="btn btn-primary">Leer Mas</a>
                     <div class="d-block mt-3">
                       <span class="badge badge-info text-capitalize text-white ">{{ $tag }}</span>
                     </div>

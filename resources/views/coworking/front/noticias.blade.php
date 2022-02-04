@@ -1,7 +1,6 @@
 @extends('coworking.front.app')
 @section('content')
 
-{{-- content --}}
-{{-- end content --}}
+@include('coworking.front.Template.listItems', ['items'=>$news,'model'=>'News', 'file'=>'news_images', 'tag'=>'Noticias'])
 
 @endsection
