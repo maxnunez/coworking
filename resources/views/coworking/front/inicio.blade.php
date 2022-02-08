@@ -20,7 +20,6 @@
         <a class="btn btn-primary">Leer Mas</a>
       </div>
     </div>
-    @include('coworking.front.Template.servicios')
     <div class="row py-5 ">
       <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
         <h2 class="text-uppercase font-weight-bold">como funciona?</h2>
@@ -39,7 +38,6 @@
         <div class="cont-img como-funciona"></div>
       </div>
     </div>
-    @include('coworking.front.Template.servicios')
     <div class="row py-5">
       <div class="col-sm-12 col-md-6 wow animate__animated animate__fadeInBottomLeft ">
         <div class="cont-img noticias"></div>

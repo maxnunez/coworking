@@ -9,6 +9,9 @@ transition: background 0.3s, border-radius 0.3s, opacity 0.3s;*/
 *::before {
     box-sizing: border-box;
 }
+p {
+    text-align: justify;
+}
 /*! Guide color */
 :root {
     --primary-color: #2ad2c9;
@@ -72,7 +75,7 @@ body {
 }
 .content-text p {
     font-size: 1.1em;
-    line-height: 19px;
+    line-height: 20px;
     font-weight: 300;
 }
 .content-text h2,
@@ -164,7 +167,7 @@ h2::before {
     text-align: center;
     display: block;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .footer .list-menu ul li a:hover {
     text-decoration: none;
@@ -185,6 +188,7 @@ h2::before {
 .card {
     background-color: var(--secundary-color);
     color: var(--text-background-dark);
+    box-shadow: 0px 0px 0px 1.2px var(--text-background-dark);
 }
 .asaid-noticias {
     display: flex;
@@ -197,6 +201,12 @@ h2::before {
 }
 .card-body .card-text {
     font-weight: 300;
+}
+.card .card-body .card-title {
+    border-bottom: 1px solid var(--text-background-dark);
+}
+.card .card-body p {
+    font-size: 0.9em;
 }
 .image-card {
     height: 200px;

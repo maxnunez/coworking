@@ -4,18 +4,18 @@
   <!-- footer -->
   <div class="footer py-4">
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-sm-12 col-md-4">
           <div class="logo py-3">
             <img src="{{ asset('front_page/img/fondo-oscuro.svg') }}" alt="logo empresarial">
           </div>
         </div>
         <div class="col-sm-12 col-md-4">
-          <p class="pt-4 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex iste incidunt dolorem modi animi
+          {{-- <p class="pt-4 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ex iste incidunt dolorem modi animi
             accusamus, saepe provident odio ipsam dolores quisquam consequatur maiores placeat veritatis sit illum earum
-            optio.</p>
+            optio.</p> --}}
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4 ">
           <div class="py-3 list-menu">
             <ul >
               <li>
