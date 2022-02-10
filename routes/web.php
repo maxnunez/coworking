@@ -32,6 +32,8 @@ Route::get('/Items-Mas/{id}/{model}', 'WebController@showItems');
 
 Route::get('/Producto-Mas/{id}/{type}', 'WebController@showProduct');
 
+Route::get('Perfil-Usuario','WebController@perfil');
+
 /* Route::group(['middleware' => 'auth'], function () {
     Route::get('/user-perfil', 'WebController@userPerfil');
     Route::post('/user-update/{id}', 'WebController@updateUser');
@@ -41,8 +43,7 @@ Route::get('/Producto-Mas/{id}/{type}', 'WebController@showProduct');
     TODO:
     - Rutas temporales  por diseño
  */
-Route::get('/change-page', 'WebController@changeView');
-Route::get('/blog-page', 'WebController@blogView');
+
 
 Auth::routes();
 

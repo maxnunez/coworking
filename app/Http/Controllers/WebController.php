@@ -19,7 +19,6 @@ class WebController extends Controller
      */
     public function index()
     {
-      
         return view('coworking.front.inicio');
     }
     public function services()
