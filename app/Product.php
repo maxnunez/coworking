@@ -13,7 +13,6 @@ class Product extends Model
         'url_img',
         'content',
         'type',
-        'amount',
         'user_id',
         'status'
     ];

@@ -66,7 +66,7 @@
                                 {{  @$item->type }}
                             </td>
                              <td>
-                                {{  @$item->status }}
+                                {{ (@$item->status == 1)? 'Activo':'Desactivado'  }}
                             </td>
                             <td>
                                 <a href="{{ url('admin/categorias/' . @$item->id . '/edit') }}">

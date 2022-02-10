@@ -78,7 +78,7 @@
                                 {{  @$item->order }}
                             </td>
                              <td>
-                                {{  @$item->status }}
+                                {{ (@$item->status == 1)? 'Activo':'Desactivado'  }}
                             </td>
                             <td>
                                 <a href="{{ url('admin/noticias/' . @$item->id . '/edit') }}">

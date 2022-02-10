@@ -78,7 +78,7 @@
                                 {{  @$item->url_info }}
                             </td>
                              <td>
-                                {{  @$item->status }}
+                                {{ (@$item->status == 1)? 'Activo':'Desactivado'  }}
                             </td>
                             <td>
                                 <a href="{{ url('admin/post-blogs/' . @$item->id . '/edit') }}">
