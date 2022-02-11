@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
     public function index()
@@ -77,4 +77,14 @@ class UsersController extends Controller
     {
         //
     }
+
+    public function auth_external_user(Request $request){
+        $user= $this->decodetoken($request->token);
+        Auth::guard()->loginUsingId($user->id);
+        return redirect('/');
+  }
+
+  private function decodetoken($token){
+      return json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', base64_decode($token))[1]))));
+  }
 }

@@ -83,7 +83,7 @@
                                 {{  @$item->user->full_name }}
                             </td>
                             <td>
-                                {{  @$item->status }}
+                                {{  (@$item->status == 1)? 'Activo':'Desactivado'  }}
                             </td>
                             <td>
                                 <a href="{{ url('admin/productos-servicios/' . @$item->id . '/edit') }}">

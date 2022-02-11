@@ -28,14 +28,14 @@
                 <div class="col-lg-7">
                     @if(isset($blog->url_img) && $blog->url_img != '')
                     <input type="hidden" name="url_img" value="{{ $blog->url_img }}">
-                        <div class="thumb">
-                            <img src="{{ url('img/blog_images/'.$blog->url_img) }}" width="200px"/>
-                        </div>
+                    <div class="thumb">
+                        <img src="{{ url('img/blog_images/'.$blog->url_img) }}" width="200px" />
+                    </div>
                     @endif
                     <span class="form-control upload">
                         <i aria-hidden="true" class="fa fa-upload" id="B">
                         </i>
-                        <input accept="image/*" id="input-fileB" name="url_img" type="file"/>
+                        <input accept="image/*" id="input-fileB" name="url_img" type="file" />
                     </span>
                     {!! $errors->first('url_img', '
                     <p class="help-block">
@@ -44,7 +44,7 @@
                     ') !!}
                 </div>
             </div>
-             <div class="form-group row{{ $errors->has('type') ? 'has-error' : ''}}">
+            <div class="form-group row{{ $errors->has('type') ? 'has-error' : ''}}">
                 {{ Form::label('type', 'Tipo: ', ['class' => 'col-md-4 form-control-label text-md-right']) }}
                 <div class="col-md-7">
                     {{ Form::select('type', ['Producto' => 'producto', 'Servicio' => 'servicio','Regalo'=> 'regalo'], ['class' => 'form-control ', 'placeholder'=>"Tipo"]) }}
@@ -66,18 +66,7 @@
                     ') !!}
                 </div>
             </div>
-              <div class="form-group row {{ $errors->has('amount') ? 'has-error' : ''}}">
-                {{ Form::label('amount', 'Precio: ', ['class' => 'col-md-4 form-control-label text-md-right']) }}
-                <div class="col-md-7">
-                    {{ Form::number('amount', null, ['class' => 'form-control ', 'placeholder'=>"Precio"]) }}
-                    {!! $errors->first('amount', '
-                    <p class="help-block">
-                        :message
-                    </p>
-                    ') !!}
-                </div>
-            </div>
-               <div class="form-group row {{ $errors->has('category_id') ? 'has-error' : ''}}">
+            <div class="form-group row {{ $errors->has('category_id') ? 'has-error' : ''}}">
                 {{ Form::label('category_id', 'Categoria: ', ['class' => 'col-md-4 form-control-label text-md-right']) }}
                 <div class="col-md-7">
                     {{ Form::select('category_id[]', $categories, null,['class' => 'form-control','id'=>'select-picker','multiple' => 'multiple']) }}
@@ -98,17 +87,17 @@
 
 @section('js')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <!-- Bootstrap JavaScript -->
+<!-- Bootstrap JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-           $('#select-picker').multiSelect(
-            {
-                keepOrder: true,
-                selectableHeader: "<div class='custom-header'>Lista de Categorias</div>",
-                selectionHeader: "<div class='custom-header'>Categorias Seleccion</div>",
+    $(document).ready(function () {
+        $('#select-picker').multiSelect({
+            keepOrder: true,
+            selectableHeader: "<div class='custom-header'>Lista de Categorias</div>",
+            selectionHeader: "<div class='custom-header'>Categorias Seleccion</div>",
 
-            });
         });
+    });
+
 </script>
 @endsection

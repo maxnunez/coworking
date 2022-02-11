@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Traits\GenericClassWithMedia;
 use Illuminate\Support\Facades\DB;
-use App\User;
+
 // DB
 
 class User extends Authenticatable
