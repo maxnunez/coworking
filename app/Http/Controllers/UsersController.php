@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class UsersController extends Controller
 {
     public function index()
@@ -12,7 +13,7 @@ class UsersController extends Controller
         $users = User::users()->paginate(10);
         return view('coworking.bakent.users.index', compact('users'));
     }
-/**
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -78,13 +79,20 @@ class UsersController extends Controller
         //
     }
 
-    public function auth_external_user(Request $request){
-        $user= $this->decodetoken($request->token);
+    public function auth_external_user(Request $request)
+    {
+        $user = $this->decodetoken($request->token);
         Auth::guard()->loginUsingId($user->id);
-        return redirect('/');
-  }
 
-  private function decodetoken($token){
-      return json_decode(base64_decode(str_replace('_', '/', str_replace('-','+',explode('.', base64_decode($token))[1]))));
-  }
+        if (Auth::user()->email === 'partners@wefu.com.co') {
+            return redirect('/home');
+        } else {
+            return redirect('/');
+        }
+    }
+
+    private function decodetoken($token)
+    {
+        return json_decode(base64_decode(str_replace('_', '/', str_replace('-', '+', explode('.', base64_decode($token))[1]))));
+    }
 }

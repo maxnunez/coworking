@@ -22,10 +22,10 @@ class WebController extends Controller
         return view('coworking.front.inicio');
     }
     public function services()
-    {   $news = News::inRandomOrder()->limit(5)->get();
+    {
+        $news = News::inRandomOrder()->limit(5)->get();
         $servicios  = Product::paginate(20)->where('type', "=", "Servicio");
         return view('coworking.front.servicios', compact('servicios', 'news'));
-
     }
     public function products()
     {
@@ -44,27 +44,27 @@ class WebController extends Controller
         $blogs = Blog::all();
         return view('coworking.front.blog', compact('blogs'));
     }
-    public function showProduct($id, $type){
-    
+    public function showProduct($id, $type)
+    {
+
         $product = Product::find($id);
         $products = Product::where('type', "=", "$type")->inRandomOrder()->limit(3)->get();
         $news = News::inRandomOrder()->limit(5)->get();
-      
+
         return view('coworking.front.paginaInterna', compact('news', 'product', 'products'));
     }
-  
+
     public function showItems($id, $model)
     {
-        $class = 'App\\'.$model;
+        $class = 'App\\' . $model;
         $item =   $class::find($id);
         $items = $class::inRandomOrder()->limit(3)->get();
         $news = News::inRandomOrder()->limit(5)->get();
 
-        $file = ($model == 'News' ) ? 'news_images' : 'blog_images';
+        $file = ($model == 'News') ? 'news_images' : 'blog_images';
 
         return view('coworking.front.interna', compact('item', 'items', 'news', 'file'));
     }
-    
     /**
      *
      * TODO:
