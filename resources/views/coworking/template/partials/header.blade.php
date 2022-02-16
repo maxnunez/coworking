@@ -28,7 +28,7 @@
                 </span>
             </button>
         </span>
-    </div>                
+    </div>
     <div class="app-header__content">
         <div class="app-header-right">
 
@@ -40,13 +40,13 @@
 
                 <div class="btn-group b-dropdown dropdown" id="__BVID__16">
                     <!---->
-                    <button 
-                        aria-haspopup="true" 
-                        aria-expanded="false" 
-                        type="button" 
-                        class="btn-link dropdown-toggle-no-caret p-0 mr-2" 
+                    <button
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        type="button"
+                        class="btn-link dropdown-toggle-no-caret p-0 mr-2"
                         id="show_notificaciones"
-                        style="border: none !important; text-decoration: none !important; background-color: transparent;" 
+                        style="border: none !important; text-decoration: none !important; background-color: transparent;"
                     >
                         <div class="icon-wrapper icon-wrapper-alt rounded-circle">
                             <div class="icon-wrapper-bg bg-danger"></div>
@@ -56,12 +56,12 @@
                     </button>
 
                     <div
-                        id="container-notificaciones" 
+                        id="container-notificaciones"
                         ruta=""
-                        role="menu" 
-                        tabindex="-1" 
-                        class="dropdown-menu dropdown-menu-right dropdown-menu-xl" 
-                        aria-labelledby="__BVID__16__BV_toggle_" 
+                        role="menu"
+                        tabindex="-1"
+                        class="dropdown-menu dropdown-menu-right dropdown-menu-xl"
+                        aria-labelledby="__BVID__16__BV_toggle_"
                         style=""
                     >
                         <div class="dropdown-menu-header mb-0">
@@ -77,13 +77,13 @@
                             <div class="tabs card-header-tab-animation" id="__BVID__17">
                                 <div class="tab-content" id="__BVID__17__BV_tab_container_">
                                 <div 
-                                    role="tabpanel" 
-                                    aria-hidden="false" 
-                                    aria-expanded="true" 
-                                    class="tab-pane p-3 card-body show fade active" 
-                                    id="__BVID__21" 
-                                    aria-labelledby="__BVID__21___BV_tab_button__" 
-                                    style="outline: none;" 
+                                    role="tabpanel"
+                                    aria-hidden="false"
+                                    aria-expanded="true"
+                                    class="tab-pane p-3 card-body show fade active"
+                                    id="__BVID__21"
+                                    aria-labelledby="__BVID__21___BV_tab_button__"
+                                    style="outline: none;"
                                     tabindex="0"
                                 >
                                     <div class="scroll-gradient">
@@ -131,7 +131,7 @@
 
             {{-- ***************** --}}
             {{-- boton de perfil --}}
-            {{-- ***************** --}}            
+            {{-- ***************** --}}
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
                     <div class="widget-content-wrapper">
@@ -172,12 +172,6 @@
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
                                             </form>
-                                        </li>
-
-                                        <li class="nav-item-btn text-center nav-item">
-                                            <a class="btn-wide btn btn-primary btn-sm" href="">
-                                                Mi perfil
-                                            </a>
                                         </li>
                                     </ul>
                                 </div>

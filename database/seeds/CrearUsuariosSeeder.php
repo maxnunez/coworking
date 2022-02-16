@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+
 class CrearUsuariosSeeder extends Seeder
 {
     /**
@@ -17,11 +18,9 @@ class CrearUsuariosSeeder extends Seeder
             'name2' => 'juan',
             'surname' => 'carrasco',
             'surname2' => 'nuñez',
-            'email' => 'marcelo@gmail.com',
+            'email' => 'partners@wefu.com.co',
             'password' => bcrypt('admin123'),
             'rol' => 'admin'
         ]);
     }
 }
-
-

@@ -27,21 +27,16 @@ Route::get('/Productos', 'WebController@products')->name('productos');
 Route::get('/Ayuda', 'WebController@help')->name('ayuda');
 Route::get('/Blog', 'WebController@blog')->name('blog');
 Route::get('/Noticias', 'WebController@News')->name('noticias');
-
 Route::get('/Items-Mas/{id}/{model}', 'WebController@showItems');
-
 Route::get('/Producto-Mas/{id}/{type}', 'WebController@showProduct');
+Route::get('Perfil-Usuario', 'WebController@perfil');
 
-Route::get('Perfil-Usuario','WebController@perfil');
-
-/* Route::group(['middleware' => 'auth'], function () {
-    Route::get('/user-perfil', 'WebController@userPerfil');
-    Route::post('/user-update/{id}', 'WebController@updateUser');
-}); */
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/Socio', 'WebController@index');
+});
 /**
 
-    TODO:
-    - Rutas temporales  por diseño
+    TODO:  Rutas temporales  por diseño
  */
 
 
@@ -70,4 +65,4 @@ Route::get('/filtrar/productos/{id}', 'FiltrarCategoriasController@filtrarproduc
 Route::get('/paginastatic-intercambios', 'PaginasestaticasController@intercambios')->name('paginastatic01');
 Route::get('/paginastatic-ofertas', 'PaginasestaticasController@ofertas')->name('paginastatic02');
 
-Route::get('/auth/external/user','UsersController@auth_external_user');
+Route::get('/auth/external/user', 'UsersController@auth_external_user');

@@ -15,14 +15,18 @@
                   <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                   <a class="nav-link" href="{{ route('ayuda') }}">Ayuda</a>
                   <a class="nav-link" href="{{ route('noticias') }}">Noticias</a>
-                  {{-- <a href="#" class="btn  btn-primary" style="padding-top: 10px;">Login</a> --}}
+                  @if(@Auth::user())
                   <div class="btn-group dropleft">
-                      <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">Marcelo Carrasco</button>
+                      <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->full_name}}</button>
                       <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Perfil</a>
-                          <a class="dropdown-item" href="#">Logaut</a>
+                          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logaut</a>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                       </div>
                   </div>
+                  @endif
               </div>
           </div>
       </nav>
