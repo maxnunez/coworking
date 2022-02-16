@@ -21,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = 'http://partners.wefu.com.co/home';
     public const  INDEX = '/Socio';
 
     /**

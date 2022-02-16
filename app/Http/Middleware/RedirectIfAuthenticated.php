@@ -20,13 +20,11 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
 
-            switch (Auth::user()->email) {
-                case 'partners@wefu.com.co':
-                    return redirect(RouteServiceProvider::HOME);
-                    break;
-                default:
-                    return redirect(RouteServiceProvider::INDEX);
-                    break;
+
+            if (Auth::user()->email === 'partners@wefu.com.co') {
+                return redirect(RouteServiceProvider::HOME);
+            } else {
+                return redirect(RouteServiceProvider::INDEX);
             }
         }
 
