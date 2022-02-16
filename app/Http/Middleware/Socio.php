@@ -3,7 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+
 class Socio
 {
     /**
@@ -15,16 +16,12 @@ class Socio
      */
     public function handle($request, Closure $next)
     {
-        if(!Auth::check())
-        {
+        if (!Auth::check()) {
             return redirect()->route('loginUser');
         }
 
-        if(Auth::user()->rol == 'socio' || Auth::user()->rol == 'invitado')
-        {
+        if (Auth::user()->rol == 'socio' || Auth::user()->rol == 'invitado') {
             return $next($request);
         }
-
-
     }
 }

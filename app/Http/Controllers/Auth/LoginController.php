@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Auth;
+
 class LoginController extends Controller
 {
     /*
@@ -30,20 +31,13 @@ class LoginController extends Controller
     public function redirectTo()
     {
 
-        switch (Auth::user()->rol) {
-            case 'admin':
-                return $this->redirectTo;
-                break;
-            case 'socio':
-                $this->redirectTo = '/';
-                return $this->redirectTo;
-                break;
-            case 'invitado':
-                $this->redirectTo = '/';
+        switch (Auth::user()->email) {
+            case 'partners@wefu.com.co':
+                $this->redirectTo = '/home';
                 return $this->redirectTo;
                 break;
             default:
-                $this->redirectTo = '/loginUser';
+                $this->redirectTo = '/Socio';
                 return $this->redirectTo;
                 break;
         }
