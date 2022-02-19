@@ -7,6 +7,9 @@
               <h5 class="card-title text-capitalize">{{ $product->title }}</h5>
               <p class="card-text ">{{ $product->abstract }}</p>
               <a href="{{  url('Producto-Mas/'.$product->id.'/'.$product->type) }}" class="btn btn-primary">Leer Mas</a>
+              @if(Auth::user()->id != $product->user_id)
+              <a href="" class="btn btn-primary">Intecambiar</a>
+              @endif
               <div class="d-block mt-3">
                   <span class="badge badge-info text-capitalize text-white ">{{ $tag }}</span>
               </div>
