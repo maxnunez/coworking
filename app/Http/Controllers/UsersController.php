@@ -81,6 +81,7 @@ class UsersController extends Controller
     public function auth_external_user(Request $request){
         $user= $this->decodetoken($request->token);
         Auth::guard()->loginUsingId($user->id);
+        if(Auth::user()->email==="partners@wefu.com.co") return redirect('/home');
         return redirect('/');
   }
 
