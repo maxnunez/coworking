@@ -42,11 +42,13 @@ class CategoriesController extends Controller
         $fields = $request->all();
         $v = Validator::make($request->all(), [
             'name' => 'required|string',
-            'type' => 'required|string'
+            'type' => 'required|string',
+            'url_img' => 'required',
         ]);
         if ($v && $v->fails()) {
             return redirect()->back()->withInput()->withErrors($v->errors());
         }
+
 
         $category = Category::createDataWithMedia($fields, 'category');
         if ($category) {

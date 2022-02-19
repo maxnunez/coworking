@@ -38,7 +38,7 @@ class LoginController extends Controller
                 return $this->redirectTo;
                 break;
             default:
-                $this->redirectTo = '/Socio';
+                $this->redirectTo = '/';
                 return $this->redirectTo;
                 break;
         }

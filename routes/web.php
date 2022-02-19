@@ -32,7 +32,9 @@ Route::get('/Producto-Mas/{id}/{type}', 'WebController@showProduct');
 Route::get('Perfil-Usuario', 'WebController@perfil');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/Socio', 'WebController@index');
+    Route::get('/Add-Front-Product', 'WebController@addFrontProduct')->name('addFrontProducto');
+    Route::post('/addProduct', 'WebController@addProduct');
+    Route::get('/Perfil-User/{id}', 'WebController@getperfil');
 });
 /**
 

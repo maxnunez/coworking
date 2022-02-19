@@ -29,14 +29,15 @@
     </script>
     <script defer="" src="{{ asset('js/demo.js') }}">
     </script>
-    <script defer="" src="{{ asset('front_page/jquery.multi-select.js') }}">
+    <script defer="" src="{{ asset('multiselect/multi.js') }}">
     </script>
     <!-- Fonts -->
     <link href="//fonts.gstatic.com" rel="dns-prefetch">
     <link href="{{asset('css')}}/base.css?version=2" rel="stylesheet">
     <link href="{{asset('css')}}/estilos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="{{ asset('front_page/multi-select.css') }}" rel="stylesheet">
+    <link href="{{ asset('multiselect/multi.css') }}" rel="stylesheet">
+    <link href="{{ asset('multiselect/theme.css') }}" rel="stylesheet">
     <!-- Styles -->
     {{--
                                             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -115,9 +116,7 @@
     {{--  --}}
     <script type="text/javascript">
         $(document).ready(function () {
-
             $('.ckeditor').ckeditor();
-
             $('#select-picker').multiSelect();
         });
 

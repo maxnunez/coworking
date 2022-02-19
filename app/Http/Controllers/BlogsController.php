@@ -44,7 +44,8 @@ class BlogsController extends Controller
         $v = Validator::make($request->all(), [
             'title' => 'required|string',
             'content' => 'required|string',
-            'abstract' => 'required|string'
+            'abstract' => 'required|string',
+            'url_img' => 'required',
         ]);
         if ($v && $v->fails()) {
             return redirect()->back()->withInput()->withErrors($v->errors());

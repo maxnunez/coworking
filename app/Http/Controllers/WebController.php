@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use App\Blog;
 use App\News;
 use App\User;
+use App\Change;
 use App\Product;
+use App\Category;
+use App\CategoryProduct;
 use App\QuestionAndAnswer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 
 class WebController extends Controller
@@ -24,13 +29,13 @@ class WebController extends Controller
     public function services()
     {
         $news = News::inRandomOrder()->limit(5)->get();
-        $servicios  = Product::paginate(20)->where('type', "=", "Servicio");
+        $servicios  = Product::paginate(20)->where('type', "=", "Servicio")->where('status', '=', '1');
         return view('coworking.front.servicios', compact('servicios', 'news'));
     }
     public function products()
     {
         $news = News::inRandomOrder()->limit(5)->get();
-        $bienes     = Product::paginate(20)->where('type', "=", "Producto");
+        $bienes     = Product::paginate(20)->where('type', "=", "Producto")->where('status', '=', '1');
         return view('coworking.front.productos', compact('bienes', 'news'));
     }
 
@@ -48,7 +53,7 @@ class WebController extends Controller
     {
 
         $product = Product::find($id);
-        $products = Product::where('type', "=", "$type")->inRandomOrder()->limit(3)->get();
+        $products = Product::where('type', "=", "$type")->where('status', '=', '1')->inRandomOrder()->limit(3)->get();
         $news = News::inRandomOrder()->limit(5)->get();
 
         return view('coworking.front.paginaInterna', compact('news', 'product', 'products'));
@@ -87,19 +92,58 @@ class WebController extends Controller
         return view('coworking.front.noticias', compact('news'));
     }
 
-    // public function updateUser(Request $request, $id)
-    // {
+    /** TODO: FUNCIONALIDAD DEUSURIO LOGUEADO CON ID
+     *
+     * fACTORIZAR CODE SCOPE QUEEY TAREA SECUNDARY
+     */
+    public function addFrontProduct()
+    {
+        $categories = Category::pluck('name', 'id');
+        return view('coworking.front.addProduct', compact('categories'));
+    }
 
-    //     /*
-    //     TODO:
-    //       revisar  el update  desde las vistas con la multi coneccion de basede datos
-    //     */
-    //     $user = User::find($id);
-    //     $fields = $request->all();
+    public function addProduct(Request $request)
+    {
+        $fields = $request->all();
+        $v = Validator::make($request->all(), [
+            'title'       => 'required|string',
+            'category_id' => 'required',
+            'url_img' => 'required',
+        ]);
+        if ($v && $v->fails()) {
+            return redirect()->back()->withInput()->withErrors($v->errors());
+        }
+        $product = Product::createDataWithMedia($fields, 'product');
 
-    //     User::updateDataWithMedia($id, $fields);
+        if (is_array($fields['category_id'])) {
+            foreach ($fields['category_id'] as $value) {
+                $cat              = new CategoryProduct;
+                $cat->product_id  = $product->id;
+                $cat->category_id = $value;
+                $cat->save();
+            }
+        } else {
+            $cat              = new CategoryProduct;
+            $cat->product_id  = $product->id;
+            $cat->category_id = $fields['category_id'];
+            $cat->save();
+        }
 
+        if ($product) {
+            Session::flash('flash_message', 'Se ha creado un nuevo producto');
+            Session::flash('flash_message_type', 'success');
+        } else {
+            Session::flash('flash_message', 'Hubo un error al crear el producto ');
+            Session::flash('flash_message_type', 'success');
+        }
+        return redirect('/');
+    }
 
-    //     return redirect('/user-perfil');
-    // }
+    public function getperfil($id)
+    {
+        $myproduct = Product::where('type', '=', 'Producto 	')->where('id', $id)->get();
+        $myServices = Product::where('type', '=', 'Servicio')->where('id', $id)->get();
+        $change = Change::where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->where('status', '=', 'change')->get();
+        $pendients = Change::where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->where('status', '=', 'pending')->get();
+    }
 }

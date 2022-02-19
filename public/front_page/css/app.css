@@ -227,3 +227,23 @@ h2::before {
     color: var(--text-background-dark);
     font-weight: 400;
 }
+
+.form-group label {
+    font-weight: 400;
+}
+.ms-selectable .custom-header,
+.ms-selection .custom-header{
+color: var(--text-background-dark);
+font-size: 14px;
+font-weight: bold;
+background-color: var(--background-dark);
+text-align: center;
+}
+.ms-elem-selectable,
+.ms-elem-selection{
+    font-weight: bolder;
+}
+.btn .btn-inverse,
+.btn .btn-inverse:hover {
+    color: var(--text-background-dark) !important;
+}
