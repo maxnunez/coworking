@@ -83,12 +83,8 @@ class UsersController extends Controller
     {
         $user = $this->decodetoken($request->token);
         Auth::guard()->loginUsingId($user->id);
-
-        if (Auth::user()->email === 'partners@wefu.com.co') {
-            return redirect('/home');
-        } else {
-            return redirect('/');
-        }
+        if (Auth::user()->email === "partners@wefu.com.co") return redirect('/home');
+        return redirect('/');
     }
 
     private function decodetoken($token)
