@@ -53,6 +53,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     protected $redirectAfterLogout = 'http://backoffice.wefu.com.co/login';
+
     public function logout(Request $request)
     {
         $this->guard()->logout();
@@ -61,6 +62,6 @@ class LoginController extends Controller
         if ($response = $this->loggedOut($request)) {
             return $response;
         }
-        return redirect($this->redirectAfterLogout);
+        return redirect()->to($this->redirectAfterLogout);
     }
 }
