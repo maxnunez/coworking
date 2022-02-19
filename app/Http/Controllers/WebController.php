@@ -141,9 +141,11 @@ class WebController extends Controller
 
     public function getperfil($id)
     {
-        $myproduct = Product::where('type', '=', 'Producto 	')->where('id', $id)->get();
-        $myServices = Product::where('type', '=', 'Servicio')->where('id', $id)->get();
-        $change = Change::where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->where('status', '=', 'change')->get();
-        $pendients = Change::where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->where('status', '=', 'pending')->get();
+        $myProducts = Product::where('type', '=', 'Producto')->where('user_id', '=', $id)->get();
+        $myServices = Product::where('type', '=', 'Servicio')->where('user_id', '=', $id)->get();
+        $changes = Change::where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->where('status', '=', 'change')->get();
+        $pendings = Change::where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->where('status', '=', 'pending')->get();
+
+        return view('coworking.front.perfil', compact('myProducts', 'myServices', 'changes', 'pendings'));
     }
 }

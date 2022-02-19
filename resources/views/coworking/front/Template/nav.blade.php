@@ -19,7 +19,7 @@
                   <div class="btn-group dropleft">
                       <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->full_name}}</button>
                       <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Perfil</a>
+                          <a class="dropdown-item" href="{{ url('/Perfil-User/'.Auth::user()->id)}}">Perfil</a>
                           <a class="dropdown-item" href="{{route('addFrontProducto') }}">Crear Servicio o Producto</a>
                           <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logaut</a>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
