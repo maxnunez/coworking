@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('front_page/css/animate.css') }}">
     <link href="{{ asset('multiselect/multi.css') }}" rel="stylesheet">
     <link href="{{ asset('multiselect/theme.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f6286de45.js" crossorigin="anonymous"></script>
     <title>wefu</title>
 </head>
 
@@ -23,6 +24,12 @@
         @yield('content')
     </div>
     @include('coworking.front.Template.footer')
+
+
+
+
+
+
     <script src="{{ asset('front_page/js/jquery.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
         integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="

@@ -35,6 +35,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Add-Front-Product', 'WebController@addFrontProduct')->name('addFrontProducto');
     Route::post('/addProduct', 'WebController@addProduct');
     Route::get('/Perfil-User/{id}', 'WebController@getperfil');
+    Route::post('/changeProduct/{id}', 'WebController@changeproduct');
+    Route::post('/changeActive/{id}', 'WebController@changeactive');
 });
 /**
 
