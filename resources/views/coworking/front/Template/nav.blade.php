@@ -9,7 +9,7 @@
           </button>
           <div class="collapse navbar-collapse ml-auto " id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
-                  <a class="nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+                  <a class="nav-link active" href="{{ url('/') }}">Inicio</a>
                   <a class="nav-link" href="{{ route('productos') }}">Productos</a>
                   <a class="nav-link" href="{{ route('servicios') }}">Servicios</a>
                   <a class="nav-link" href="{{ route('blog') }}">Blog</a>

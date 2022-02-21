@@ -1,6 +1,5 @@
  <!-- end content -->
-  <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; right: 19px;"><i
-      class="fa fa-angle-up"></i></a>
+  <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; right: 19px;"><i class="fa-solid fa-angle-up"></i></a>
   <!-- footer -->
   <div class="footer py-4">
     <div class="container">
@@ -43,6 +42,6 @@
     </div>
   </div>
   <div class="footer-text">
-  <p class="py-3">© 2017- 2022 Global Team & Marcelo Carrasco Todos los derechos reservados</p>
+  <p class="py-3">© 2017- 2022 Global Team Todos los derechos reservados</p>
   </div>
   <!-- end footer -->

@@ -128,7 +128,7 @@ h2::before {
     text-align: center;
     border-radius: 5px;
     width: 40px;
-    animation: witr_bounce 800ms ease-out infinite;
+    animation:  3.25s linear infinite;
 }
 /** Estilos de imagenes para los extos */
 .cont-img {
