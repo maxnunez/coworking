@@ -10,7 +10,7 @@
                 <p class="card-text">{{ $item->producto->abstract }}</p>
                 <div class="d-block mt-3">
                     <span class="badge badge-info text-capitalize text-white ">{{ $tag }}</span>
-                    <span class="badge badge-info text-capitalize text-white ">{{ $item->user->first_name $item->user->last_name}}</span>
+                    <span class="badge badge-info text-capitalize text-white ">{{ $item->user->first_name}} {{ $item->user->last_name }}</span>
                     <span class="badge badge-info text-capitalize text-white ">{{ $item->user->email }}</span>
                 </div>
 
