@@ -149,7 +149,7 @@ class WebController extends Controller
     $changes = Change::where('status', 'change')
       ->where(function ($query) use ($id) {
         $query->where('user_id',  $id)
-          ->Where('user_change_id', $id);
+          ->orWhere('user_change_id', $id);
       })->get();
 
     // $change = Change::where('status', 'change')->get();
@@ -157,9 +157,8 @@ class WebController extends Controller
     $pendings = Change::where('status', 'pending')
       ->where(function ($query) use ($id) {
         $query->where('user_id',  $id)
-          ->Where('user_change_id', $id);
+          ->orWhere('user_change_id', $id);
       })->get();
-
 
 
     return view('coworking.front.perfil', compact('myProducts', 'myServices', 'changes', 'pendings'));
