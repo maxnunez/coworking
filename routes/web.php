@@ -59,14 +59,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 
 /* Llamadas de páginas con Slider de Categorias  Autor : LAB*/
-Route::get('/filtrarcategorias', 'FiltrarCategoriasController@index')->name('filtrarcategorias');
+/* Route::get('/filtrarcategorias', 'FiltrarCategoriasController@index')->name('filtrarcategorias');
 Route::get('/filtrar/bienes', 'FiltrarCategoriasController@filtrarbienes')->name('filtrarbienes.ajax');
 Route::get('/filtrar/servicios', 'FiltrarCategoriasController@filtrarservicios')->name('filtrarservicios.ajax');
 Route::get('/filtrar/productos/{id}', 'FiltrarCategoriasController@filtrarproductos')->name('filtrarproductos');
 
 
-/* Llamadas de páginas estáticas : Autor:LAB */
+/* Llamadas de páginas estáticas : Autor:LAB
 Route::get('/paginastatic-intercambios', 'PaginasestaticasController@intercambios')->name('paginastatic01');
 Route::get('/paginastatic-ofertas', 'PaginasestaticasController@ofertas')->name('paginastatic02');
 
-Route::get('/auth/external/user', 'UsersController@auth_external_user');
+Route::get('/auth/external/user', 'UsersController@auth_external_user'); */

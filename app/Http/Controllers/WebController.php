@@ -152,7 +152,7 @@ class WebController extends Controller
           ->Where('user_change_id', $id);
       })->get(); */
 
-    $change = Change::where('status', 'change')->get();
+    $change = Change::where('status', 'change')->toSql();
 
     $pendings = Change::where('status', 'pending')->where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->get();
 
