@@ -11,22 +11,27 @@
                 <p class="card-text">{{ $item->productoChange->abstract }}</p>
                 <div class="d-block mt-3">
                     <span class="badge badge-info text-capitalize text-white ">{{ $tag }}</span>
-                    <span class="badge badge-info text-capitalize text-white ">{{ $item->userChange->first_name}} {{ $item->userChange->last_name }}</span>
+                    <span class="badge badge-info text-capitalize text-white ">{{ $item->userChange->first_name}}
+                        {{ $item->userChange->last_name }}</span>
                     <span class="badge badge-info text-capitalize text-white ">{{ $item->userChange->email }}</span>
+                    @if( Auth::user()->numero_whatsapp)
+                    <a href="https://wa.me/{{ Auth::user()->numero_whatsapp }}"
+                        class="btn btn-primary">{{ Auth::user()->numero_whatsapp }}</a>
+                    @endif
                 </div>
 
                 @if($item->status === 'pending')
-                    @if( Auth::user()->id == $item->productoChange->user_id)
-                    {!! Form::open([
-                    'url' => '/changeActive/'.$item->id,
-                    'class' => 'form-horizontal mx-auto',
-                    'files'=>true,
-                    'redirect'=> url('/'),
-                    'autocomplete'=>'off'
-                    ]) !!}
-                    <button type="submit" class="btn btn-primary">Realizar Cambio</button>
-                    {!! Form::close() !!}
-                    @endif
+                @if( Auth::user()->id == $item->productoChange->user_id)
+                {!! Form::open([
+                'url' => '/changeActive/'.$item->id,
+                'class' => 'form-horizontal mx-auto',
+                'files'=>true,
+                'redirect'=> url('/'),
+                'autocomplete'=>'off'
+                ]) !!}
+                <button type="submit" class="btn btn-primary">Realizar Cambio</button>
+                {!! Form::close() !!}
+                @endif
                 @endif
             </div>
         </div>
