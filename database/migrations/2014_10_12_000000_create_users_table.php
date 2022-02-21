@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::connection('users')->create('users', function (Blueprint $table) {
+        /*         Schema::connection('users')->create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('name2');
@@ -45,7 +45,7 @@ class CreateUsersTable extends Migration
             $table->boolean('terms_conditions')->default('0');
             $table->rememberToken();
             $table->timestamps();
-        });
+        }); */
 
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
@@ -135,7 +135,7 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        // Schema::dropIfExists('users');
         Schema::dropIfExists('ikigais');
         Schema::dropIfExists('blogs');
         Schema::dropIfExists('comments');
