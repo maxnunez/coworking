@@ -22,7 +22,7 @@
   </div>
 
 <h2 class="d-block ">Mis Productos</h2>
-  @include('coworking.front.Template.perfilTemplate',['items'=>"@$myProducts, 'file'=>'product_images', 'tag'=>'Productos'])
+  @include('coworking.front.Template.perfilTemplate',['items'=>@$myProducts, 'file'=>'product_images', 'tag'=>'Productos'])
 <h2 class="d-block">Mis Servicios</h2>
   @include('coworking.front.Template.perfilTemplate',['items'=>@$myServices, 'file'=>'product_images', 'tag'=>'Servicio'])
 
