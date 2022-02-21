@@ -68,5 +68,5 @@ Route::get('/filtrar/productos/{id}', 'FiltrarCategoriasController@filtrarproduc
 /* Llamadas de páginas estáticas : Autor:LAB
 Route::get('/paginastatic-intercambios', 'PaginasestaticasController@intercambios')->name('paginastatic01');
 Route::get('/paginastatic-ofertas', 'PaginasestaticasController@ofertas')->name('paginastatic02');
-
-Route::get('/auth/external/user', 'UsersController@auth_external_user'); */
+*/
+Route::get('/auth/external/user', 'UsersController@auth_external_user'); 
