@@ -9908,6 +9908,7 @@ button,
     opacity: 0;
 }
 
+
 .SidebarAnimation-appear.SidebarAnimation-appear-active {
     opacity: 1;
     transform: translateX(0);
