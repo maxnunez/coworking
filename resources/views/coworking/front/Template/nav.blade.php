@@ -17,7 +17,7 @@
                   <a class="nav-link" href="{{ route('noticias') }}">Noticias</a>
                   @if(@Auth::user())
                   <div class="btn-group dropleft">
-                      <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->name }}</button>
+                      <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->first_name }}  {{ Auth::user()->last_name }}</button>
                       <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{ url('/Perfil-User/'.Auth::user()->id)}}">Perfil</a>
                           <a class="dropdown-item" href="{{route('addFrontProducto') }}">Crear Servicio o Producto</a>

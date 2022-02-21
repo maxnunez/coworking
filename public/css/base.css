@@ -9957,6 +9957,9 @@ button,
     flex: 1;
     padding: 0 1.5rem;
     height: 60px;
+    background-color: #001328;
+    color: white;
+
 }
 
 .app-header .app-header__content .app-header-left {
@@ -9991,8 +9994,10 @@ button,
 .app-header__logo .logo-src {
     height: 70px;
     width:116px;
-    background: url("../img/logo.png");
-    background-size: cover;
+    background: url("../front_page/img/fondo-claro.svg");
+   background-size: auto;
+   background-repeat: no-repeat;
+   background-position: center;
 }
 
 .app-header__menu,
@@ -42612,6 +42617,7 @@ span.multiselect-native-select select {
         border-radius: 50px;
         padding: 0 10px;
         overflow: hidden;
+
     }
     .app-header .app-header__content .header-btn-lg {
         margin-left: .5rem;
@@ -42751,7 +42757,7 @@ span.multiselect-native-select select {
 
 @media (max-width: 767.98px) {
     .app-main .app-main__inner {
-        padding: 15px 15px 0;    
+        padding: 15px 15px 0;
     }
     .mbg-3,
     body .card.mb-3 {

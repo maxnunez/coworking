@@ -12,16 +12,19 @@
                 <div class="d-block mt-3">
                     <span class="badge badge-info text-capitalize text-white ">{{ $tag }}</span>
                 </div>
-                @if( Auth::user()->id == $item->productoChange->user_id)
-                {!! Form::open([
-                'url' => '/changeActive/'.$item->id,
-                'class' => 'form-horizontal mx-auto',
-                'files'=>true,
-                'redirect'=> url('/'),
-                'autocomplete'=>'off'
-                ]) !!}
-                  <button type="submit" class="btn btn-primary">Realizar Cambio</button>
-                {!! Form::close() !!}
+
+                @if($item->status === 'pending')
+                    @if( Auth::user()->id == $item->productoChange->user_id)
+                    {!! Form::open([
+                    'url' => '/changeActive/'.$item->id,
+                    'class' => 'form-horizontal mx-auto',
+                    'files'=>true,
+                    'redirect'=> url('/'),
+                    'autocomplete'=>'off'
+                    ]) !!}
+                    <button type="submit" class="btn btn-primary">Realizar Cambio</button>
+                    {!! Form::close() !!}
+                    @endif
                 @endif
             </div>
         </div>
