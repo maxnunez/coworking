@@ -146,17 +146,21 @@ class WebController extends Controller
     $myServices = Product::where('type', '=', 'Servicio')->where('user_id', '=', $id)->get();
 
 
-    /*    $changes = Change::where('status', 'change')
+    $changes = Change::where('status', 'change')
       ->where(function ($query) use ($id) {
         $query->where('user_id',  $id)
           ->Where('user_change_id', $id);
-      })->get(); */
+      })->get();
 
-    $change = Change::where('status', 'change')->toSql();
+    // $change = Change::where('status', 'change')->get();
 
-    $pendings = Change::where('status', 'pending')->where('user_id', '=', $id)->orWhere('user_change_id', '=', $id)->get();
+    $pendings = Change::where('status', 'pending')
+      ->where(function ($query) use ($id) {
+        $query->where('user_id',  $id)
+          ->Where('user_change_id', $id);
+      })->get();
 
-    dd($pendings);
+
 
     return view('coworking.front.perfil', compact('myProducts', 'myServices', 'changes', 'pendings'));
   }
