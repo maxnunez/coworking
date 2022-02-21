@@ -44,7 +44,7 @@
                         <div class="widget-content-left">
                             <div class="btn-group">
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0">
-                                    <img width="42" class="rounded-circle" src="{{Auth::user()->avatar()}}" alt="">
+                                    <img width="42" class="rounded-circle" src="{{@Auth::user()->avatar()}}" alt="">
                                     {{-- <p style="display: inline-block; margin: 0; vertical-align: middle;">{{Auth::user()->name}}</p> --}}
                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                 </a>
@@ -57,7 +57,7 @@
                                                 <div class="widget-content p-0">
                                                     <div class="widget-content-wrapper">
                                                         <div class="widget-content-left mr-3">
-                                                            <img width="55" height="55" class="rounded-circle" src="{{ Auth::user()->avatar() }}" alt="">
+                                                            <img width="55" height="55" class="rounded-circle" src="{{ @Auth::user()->avatar() }}" alt="">
                                                         </div>
                                                         <div class="widget-content-left">
                                                             <div><strong style="font-size: 1.5rem"> {{Auth::user()->first_name }} - {{ Auth::user()->last_name }} </strong></div>
