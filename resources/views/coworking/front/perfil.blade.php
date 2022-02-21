@@ -7,8 +7,8 @@
   <div class="card p-3 my-3">
     <blockquote class="blockquote mb-0 card-body">
       <img src="#" class="rounded float-left" alt="image-perfil">
-      <p class=" font-weight-normal">{{ Auth::user()->first_name }}  {{Auth::user()->last_name }}</p>
       <footer class="blockquote-footer">
+        <p class=" font-weight-normal">{{ Auth::user()->first_name }}  {{Auth::user()->last_name }}</p>
         <div class="text-muted text-white bage-question" >
           {{ Auth::user()->address  }}
           <a href="mailto:{{ Auth::user()->email }}" class="btn btn-primary">{{ Auth::user()->email }}</a>
