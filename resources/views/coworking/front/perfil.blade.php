@@ -6,7 +6,7 @@
 
   <div class="card p-3 my-3">
     <blockquote class="blockquote mb-0 card-body">
-      <img src="{{ @Auth::user()->avatar() }}" class="rounded float-left" alt="image-perfil">
+      <img src="{{ }}" class="rounded float-left" alt="image-perfil">
       <p class=" font-weight-normal">{{ Auth::user()->first_name }}  {{Auth::user()->last_name }}</p>
       <footer class="blockquote-footer">
         <div class="text-muted text-white bage-question" >
