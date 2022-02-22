@@ -275,6 +275,6 @@ function createEvent($tipo, $datos)
 
 function myProducts($id)
 {
-    $products = Product::where('user_id', '=', $id)->get();
+    $products = Product::where('user_id', '=', $id)->where('status', '=', '1')->get();
     return $products;
 }
