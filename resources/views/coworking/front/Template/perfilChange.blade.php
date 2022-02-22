@@ -14,9 +14,9 @@
                     <span class="badge badge-info text-capitalize text-white ">{{ $item->userChange->first_name}}
                         {{ $item->userChange->last_name }}</span>
                     <span class="badge badge-info text-capitalize text-white ">{{ $item->userChange->email }}</span>
-                    @if( Auth::user()->numero_whatsapp)
-                    <a href="https://wa.me/{{ Auth::user()->numero_whatsapp }}"
-                        class="btn btn-primary">{{ Auth::user()->numero_whatsapp }}</a>
+                    @if( $item->userChange->numero_whatsapp)
+                    <a href="https://wa.me/{{ $item->userChange->numero_whatsapp }}"
+                        class="btn btn-primary">{{ $item->userChange->numero_whatsapp }}</a>
                     @endif
                 </div>
 
