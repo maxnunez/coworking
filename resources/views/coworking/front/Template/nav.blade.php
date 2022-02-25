@@ -22,9 +22,9 @@
                       <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{ url('/Perfil-User/'.Auth::user()->id)}}">Perfil</a>
                         @php $exists = myComunidad(Auth::user()->id)  @endphp
-                        @empty(!$exists)
+                        @if(count($exists) > 1 )
                           <a class="dropdown-item" href="{{route('addfrontcomunidad') }}">Unete a la comunidad</a>
-                         @endempty
+                         @endif
                           <a class="dropdown-item" href="{{route('addFrontProducto') }}">Crear Servicio o Producto</a>
                           <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logaut</a>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
