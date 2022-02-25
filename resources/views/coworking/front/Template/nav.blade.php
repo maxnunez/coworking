@@ -22,7 +22,7 @@
                       <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{ url('/Perfil-User/'.Auth::user()->id)}}">Perfil</a>
                         @php $exists = myComunidad(Auth::user()->id)  @endphp
-                        @empty($exists)
+                        @empty(!$exists)
                           <a class="dropdown-item" href="{{route('addfrontcomunidad') }}">Unete a la comunidad</a>
                          @endempty
                           <a class="dropdown-item" href="{{route('addFrontProducto') }}">Crear Servicio o Producto</a>
