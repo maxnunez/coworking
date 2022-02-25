@@ -64,11 +64,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function ikigais ()
+    public function ikigais()
     {
         return $this->hasMany(Ikigai::class);
     }
-    public function comments ()
+    public function comments()
     {
         return $this->hasMany(Comment::class);
     }
@@ -76,22 +76,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Product::class);
     }
-    public function userServices ()
+    public function  patnerUser()
     {
-        return $this->hasMany(UserProducService::class);
+        return $this->hasMany(PatnerUser::class);
     }
-
-     //SCOPES
+    //SCOPES
     public function scopeUsers($query)
     {
-        return $query->where('rol','!=','admin');
+        return $query->where('rol', '!=', 'admin');
     }
 
     //Gueters
     public function getFullNameAttribute()
     {
-        return $this->name.' '.$this->surname;
+        return $this->name . ' ' . $this->surname;
     }
-
-
 }

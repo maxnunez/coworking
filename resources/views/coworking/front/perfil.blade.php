@@ -6,13 +6,16 @@
 
   <div class="card p-3 my-3">
     <blockquote class="blockquote mb-0 card-body">
-      <img src="#" class="rounded " alt="image-perfil">
+      @if(Auth::user()->avatar)
+      <img src="http://backoffice.wefu.com.co/img/usuarios/{{ Auth::user()->avatar }}" class="rounded " alt="image-perfil" height="80px">
+      @else
+      <img src="http://backoffice.wefu.com.co/img/usuarios/defecto5.jpeg" class="rounded " alt="image-perfil" height="80px">
+      @endif
       <p class="d-block font-weight-normal">{{ Auth::user()->first_name }}  {{Auth::user()->last_name }}</p>
       <footer class="blockquote-footer">
         <div class="text-muted text-white bage-question" >
           {{ Auth::user()->address  }}
           <a href="mailto:{{ Auth::user()->email }}" class="btn btn-primary">{{ Auth::user()->email }}</a>
-
           @if( Auth::user()->numero_whatsapp)
           <a href="https://wa.me/{{ Auth::user()->numero_whatsapp }}" class="btn btn-primary">{{ Auth::user()->numero_whatsapp }}</a>
           @endif

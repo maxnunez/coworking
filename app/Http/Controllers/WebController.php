@@ -8,6 +8,7 @@ use App\User;
 use App\Change;
 use App\Product;
 use App\Category;
+use App\PatnerUser;
 use App\CategoryProduct;
 use App\QuestionAndAnswer;
 use Illuminate\Http\Request;
@@ -191,5 +192,33 @@ class WebController extends Controller
     $change->update($fields);
 
     return redirect('/Perfil-User/' . Auth::user()->id);
+  }
+
+  public function Comunidad()
+  {
+    $users = PatnerUser::get();
+    return view('coworking.front.comunidad', compact('users'));
+  }
+
+  public function addFromComunidad()
+  {
+    return view('coworking.front.addComunidad');
+  }
+
+  public function Unircecomunidad(Request $request)
+  {
+    $fields = $request->all();
+    // dd($fields);
+
+    $comunidad = PatnerUser::createDataWithMedia($fields);
+
+    if ($comunidad) {
+      Session::flash('flash_message', 'Se ha unido a la comunidad');
+      Session::flash('flash_message_type', 'success');
+    } else {
+      Session::flash('flash_message', 'Hubo un error al unirce a la unidad ');
+      Session::flash('flash_message_type', 'success');
+    }
+    return redirect('/Comunidad');
   }
 }

@@ -10,6 +10,7 @@
           <div class="collapse navbar-collapse ml-auto " id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
                   <a class="nav-link active" href="{{ url('/') }}">Inicio</a>
+                  <a class="nav-link " href="{{ url('/Comunidad') }}">Comunidad</a>
                   <a class="nav-link" href="{{ route('productos') }}">Productos</a>
                   <a class="nav-link" href="{{ route('servicios') }}">Servicios</a>
                   <a class="nav-link" href="{{ route('blog') }}">Blog</a>
@@ -20,6 +21,10 @@
                       <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->first_name }}  {{ Auth::user()->last_name }}</button>
                       <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{ url('/Perfil-User/'.Auth::user()->id)}}">Perfil</a>
+                        @php $exists = myComunidad(Auth::user()->id)  @endphp
+                        @empty($exists)
+                          <a class="dropdown-item" href="{{route('addfrontcomunidad') }}">Unete a la comunidad</a>
+                         @endempty
                           <a class="dropdown-item" href="{{route('addFrontProducto') }}">Crear Servicio o Producto</a>
                           <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logaut</a>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

@@ -37,6 +37,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Perfil-User/{id}', 'WebController@getperfil');
     Route::post('/changeProduct/{id}', 'WebController@changeproduct');
     Route::post('/changeActive/{id}', 'WebController@changeactive');
+    Route::get('/Add-Front-Comunidad', 'WebController@addFromComunidad')->name('addfrontcomunidad');
+    Route::post('/unirceComunidad', 'WebController@Unircecomunidad');
+    Route::get('/Comunidad', 'WebController@Comunidad');
 });
 /**
 

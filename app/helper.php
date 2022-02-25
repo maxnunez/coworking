@@ -1,6 +1,7 @@
 <?php
 
 use App\Product;
+use App\PatnerUser;
 use Illuminate\Support\Facades\Mail;
 
 function getToken($length = 50)
@@ -277,4 +278,10 @@ function myProducts($id)
 {
     $products = Product::where('user_id', '=', $id)->where('status', '=', '1')->get();
     return $products;
+}
+
+function myComunidad($id)
+{
+    $comunidad = PatnerUser::where('user_id', '=', $id)->get();
+    return $comunidad;
 }
