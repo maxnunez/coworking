@@ -11,14 +11,9 @@
     @forelse ($users as $item )
     <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
         <div class="card">
-
-            @if($item->avatar)
-            <img src="{{ asset('img/partnerUser_images/'.$item->url_img) }}" class="rounded mx-auto mt-2"
+        <img src="{{ asset('img/partnerUser_images/'.$item->url_img) }}" class="rounded mx-auto mt-2"
                 alt="image-perfil" height="80px" width="80px">
-            @else
-            <img src="http://backoffice.wefu.com.co/img/usuarios/defecto5.jpeg" class="rounded mx-auto mt-2" alt="image-perfil"
-                height="80px" width="80px">
-            @endif
+
         <p class="text-uppercase text-center text-white mt-3 mb-0 p-1" style="background-color:#2ad2c9;">{{ $item->name_complete }}</p>
         <div class="card-body"   style=" overflow-y: scroll;height: 270px;">
             <p class="card-text">{!! $item->information !!}</p>
