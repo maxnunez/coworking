@@ -1,7 +1,7 @@
   <!-- header -->
   <header class="header">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class=" navbar-brand" href="index.html"><img src="{{ asset('front_page/img/fondo-oscuro.svg') }}"
+          <a class=" navbar-brand" href="{{url('/') }}"><img src="{{ asset('front_page/img/fondo-oscuro.svg') }}"
                   alt="logo empresarial" class="navbar-logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

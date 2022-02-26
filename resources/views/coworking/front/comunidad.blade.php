@@ -13,7 +13,7 @@
         <div class="card">
 
             @if($item->avatar)
-            <img src="http://backoffice.wefu.com.co/img/usuarios/{{ $item->avatar }}" class="rounded mx-auto mt-2"
+            <img src="{{ asset('img/partnerUser_images/'.$item->url_img) }}" class="rounded mx-auto mt-2"
                 alt="image-perfil" height="80px" width="80px">
             @else
             <img src="http://backoffice.wefu.com.co/img/usuarios/defecto5.jpeg" class="rounded mx-auto mt-2" alt="image-perfil"
