@@ -42,6 +42,6 @@
     </div>
   </div>
   <div class="footer-text">
-  <p class="py-3">© 2017- 2022 Global Team Todos los derechos reservados</p>
+  <p class="py-3">©2022 Global Team Todos los derechos reservados</p>
   </div>
   <!-- end footer -->
