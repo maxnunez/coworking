@@ -12,12 +12,12 @@
       <img src="http://backoffice.wefu.com.co/img/usuarios/defecto5.jpeg" class="rounded " alt="image-perfil" height="80px">
       @endif
       <p class="d-block font-weight-normal">{{ Auth::user()->first_name }}  {{Auth::user()->last_name }}</p>
+      <p class="d-block font-weight">{{ Auth::user()->address  }}</p>
       <footer class="blockquote-footer">
         <div class="text-muted text-white bage-question" >
-          {{ Auth::user()->address  }}
           <a href="mailto:{{ Auth::user()->email }}" class="btn btn-primary">{{ Auth::user()->email }}</a>
           @if( Auth::user()->numero_whatsapp)
-          <a href="https://wa.me/{{ Auth::user()->numero_whatsapp }}" class="btn btn-primary">{{ Auth::user()->numero_whatsapp }}</a>
+          <a href="https://wa.me/{{ Auth::user()->numero_whatsapp }}" class="btn btn-primary" target="_blank">{{ Auth::user()->numero_whatsapp }}</a>
           @endif
         </div>
       </footer>

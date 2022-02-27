@@ -15,7 +15,7 @@
                         {{ $item->user->last_name }}</span>
                     <span class="badge badge-info text-capitalize text-white ">{{ $item->user->email }}</span>
                     @if( $item->user->numero_whatsapp)
-                    <a href="https://wa.me/{{ $item->user->numero_whatsapp }}"
+                    <a href="https://wa.me/{{ $item->user->numero_whatsapp }} target="_blank""
                         class="btn btn-primary">{{$item->user->numero_whatsapp }}</a>
                     @endif
                 </div>

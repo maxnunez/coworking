@@ -1,4 +1,4 @@
-  <div class="col-sm-12 col-lg-8 conten-products ">
+
       @forelse ( $products as $product )
       <div class="card my-3" style="width: 20rem;">
           <div style="background-image: url('{{  asset('img/product_images/'.$product->url_img)  }}');"
@@ -56,5 +56,3 @@
       @empty
       No hay Productos ....
       @endforelse
-
-  </div>
