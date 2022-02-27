@@ -6,7 +6,7 @@
 <div class="container">
 
   <div class=" row my-5">
-    @include('coworking.front.Template.asaidNoticias', ['news'=> $news, 'tag'=>'noticias'])
+      <div class="col-sm-12 col-lg-4 asaid-noticias "></div>
     @include('coworking.front.Template.productsList', ['products'=>  $servicios,'tag'=>'servicios'])
   </div>
   {{-- end content --}}

@@ -5,8 +5,6 @@
 @include('coworking.front.Template.title-page',['title'=>'Crea tu producto o servicio'])
 <div class=" row my-5">
 
-        @include('coworking.bakent.partials.messages')
-        @include('coworking.bakent.partials.errors', ['errors' => $errors])
         {!! Form::open([
         'url' => '/addProduct',
         'class' => 'form-horizontal mx-auto',
