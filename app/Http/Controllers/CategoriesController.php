@@ -42,15 +42,14 @@ class CategoriesController extends Controller
         $fields = $request->all();
         $v = Validator::make($request->all(), [
             'name' => 'required|string',
-            'type' => 'required|string',
-            'url_img' => 'required',
+            'type' => 'required|string'
         ]);
         if ($v && $v->fails()) {
             return redirect()->back()->withInput()->withErrors($v->errors());
         }
 
 
-        $category = Category::createDataWithMedia($fields, 'category');
+        $category = Category::create($fields);
         if ($category) {
             Session::flash('flash_message', 'Se ha creado una nueva categoria');
             Session::flash('flash_message_type', 'success');
@@ -104,7 +103,7 @@ class CategoriesController extends Controller
         if ($v && $v->fails()) {
             return redirect()->back()->withInput()->withErrors($v->errors());
         }
-        Category::updateDataWithMedia($id, $fields, 'category');
+        $category->update($fields);
 
         Session::flash('flash_message', 'Se ha actualizado la categoria');
         Session::flash('flash_message_type', 'success');
@@ -122,7 +121,6 @@ class CategoriesController extends Controller
     {
         $category = Category::findOrFail($id);
         if ($category) {
-            deleteImage($category->url_img, 'category_images');
             $category->delete();
             Session::flash('flash_message', '¡Categoria Eliminada!');
             Session::flash('flash_message_type', 'success');

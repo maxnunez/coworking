@@ -30,15 +30,13 @@ class WebController extends Controller
   }
   public function services()
   {
-    $news = News::inRandomOrder()->limit(5)->get();
     $servicios  = Product::paginate(20)->where('type', "=", "Servicio")->where('status', '=', '1');
-    return view('coworking.front.servicios', compact('servicios', 'news'));
+    return view('coworking.front.servicios', compact('servicios'));
   }
   public function products()
   {
-    $news = News::inRandomOrder()->limit(5)->get();
     $bienes     = Product::paginate(20)->where('type', "=", "Producto")->where('status', '=', '1');
-    return view('coworking.front.productos', compact('bienes', 'news'));
+    return view('coworking.front.productos', compact('bienes'));
   }
 
   public function help()
@@ -56,9 +54,8 @@ class WebController extends Controller
 
     $product = Product::find($id);
     $products = Product::where('type', "=", "$type")->where('status', '=', '1')->inRandomOrder()->limit(3)->get();
-    $news = News::inRandomOrder()->limit(5)->get();
 
-    return view('coworking.front.paginaInterna', compact('news', 'product', 'products'));
+    return view('coworking.front.paginaInterna', compact('product', 'products'));
   }
 
   public function showItems($id, $model)
@@ -66,11 +63,10 @@ class WebController extends Controller
     $class = 'App\\' . $model;
     $item =   $class::find($id);
     $items = $class::inRandomOrder()->limit(3)->get();
-    $news = News::inRandomOrder()->limit(5)->get();
 
     $file = ($model == 'News') ? 'news_images' : 'blog_images';
 
-    return view('coworking.front.interna', compact('item', 'items', 'news', 'file'));
+    return view('coworking.front.interna', compact('item', 'items', 'file'));
   }
   /**
    *
@@ -88,11 +84,6 @@ class WebController extends Controller
   }
   // Funciones  de  Perfil  de  Usuario
 
-  public function News()
-  {
-    $news = News::all();
-    return view('coworking.front.noticias', compact('news'));
-  }
 
   /** TODO: FUNCIONALIDAD DEUSURIO LOGUEADO CON ID
    *

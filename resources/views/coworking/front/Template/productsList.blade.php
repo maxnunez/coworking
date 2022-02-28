@@ -1,6 +1,6 @@
 
       @forelse ( $products as $product )
-      <div class="card my-3" style="width: 20rem;">
+      <div class="card m-3" style="width: 20rem;">
           <div style="background-image: url('{{  asset('img/product_images/'.$product->url_img)  }}');"
               class="image-card"></div>
           <div class="card-body">

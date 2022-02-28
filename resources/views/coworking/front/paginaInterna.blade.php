@@ -5,9 +5,8 @@
 @include('coworking.front.Template.title-page',['title'=> $product->title])
 
 <div class=" row my-5">
-    @include('coworking.front.Template.asaidNoticias', ['news'=> $news, 'tag'=>'noticias'])
 
-    <div class="col-sm-12 col-lg-8  ">
+    <div class="col ">
         <div class="card mx-auto my-3 " style="width: 95%;">
               <div style="background-image: url('{{  asset('img/product_images/'.$product->url_img)  }}'); height:400px"
               class="image-card" ></div>

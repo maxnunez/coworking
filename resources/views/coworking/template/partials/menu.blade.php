@@ -51,10 +51,6 @@
                         <i class="metismenu-icon lnr-book icon-gradient bg-premium-dark"></i>
                         Post Blogs
                     </a>
-                     <a href="{{url('admin/noticias')}}">
-                        <i class="metismenu-icon lnr-pencil icon-gradient bg-premium-dark"></i>
-                        Noticias
-                    </a>
                 </li>
                  {{-- funciones de contabilidad --}}
                  @if(Auth::user()->rol == 'Administrador' || Auth::user()->rol == 'Contabilidad')

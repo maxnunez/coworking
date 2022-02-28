@@ -15,7 +15,6 @@
                   <a class="nav-link" href="{{ route('servicios') }}">Servicios</a>
                   <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                   <a class="nav-link" href="{{ route('ayuda') }}">Ayuda</a>
-                  <a class="nav-link" href="{{ route('noticias') }}">Noticias</a>
                   @if(@Auth::user())
                   <div class="btn-group dropleft">
                       <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->first_name }}  {{ Auth::user()->last_name }}</button>

@@ -5,8 +5,7 @@
 @include('coworking.front.Template.title-page',['title'=>'Unete a la Comunidad'])
 <div class=" row my-5">
 
-        @include('coworking.bakent.partials.messages')
-        @include('coworking.bakent.partials.errors', ['errors' => $errors])
+
         {!! Form::open([
         'url' => '/unirceComunidad',
         'class' => 'form-horizontal mx-auto',
