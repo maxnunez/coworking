@@ -15,7 +15,7 @@
                         {{ $item->userChange->last_name }}</span>
                     <span class="badge badge-info text-capitalize text-white ">{{ $item->userChange->email }}</span>
                     @if( $item->userChange->numero_whatsapp)
-                    <a href="https://wa.me/{{ $item->userChange->numero_whatsapp }} target="_blank""
+                    <a href="https://wa.me/{{ $item->userChange->numero_whatsapp }} target=" _blank""
                         class="btn btn-primary">{{ $item->userChange->numero_whatsapp }}</a>
                     @endif
                 </div>
@@ -26,11 +26,17 @@
                 'url' => '/changeActive/'.$item->id,
                 'class' => 'form-horizontal mx-auto',
                 'files'=>true,
-                'redirect'=> url('/'),
                 'autocomplete'=>'off'
                 ]) !!}
                 <button type="submit" class="btn btn-primary">Realizar Cambio</button>
                 {!! Form::close() !!}
+
+                <form action="{{url('/not-change/'.$item->id)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Cancelar Cambio</button>
+                </form>
+
                 @endif
                 @endif
             </div>
