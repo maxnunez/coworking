@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 new WOW().init();
 
 $(".owl-carousel").owlCarousel({
@@ -26,7 +29,22 @@ $(".stop").on("click", function () {
     owl.trigger("stop.owl.autoplay");
 });
 
-$("#scrollUp").click(function () {
+/* $("#scrollUp").on('click',function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
+}); */
+
+$('#scrollUp').on('click', function(){
+    $('body, html').animate({
+        scrollTop: '0px'
+    }, 300);
+});
+
+$(window).on('click', function(){
+    if( $(this).scrollTop() > 0 ){
+        $('#scrollUp').slideDown(300);
+    } else {
+        $('#scrollUp').slideUp(300);
+    }
+});
 });

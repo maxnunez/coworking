@@ -7,7 +7,7 @@
         <p class="card-text ">{{ $product->abstract }}</p>
         <a href="{{  url('Producto-Mas/'.$product->id.'/'.$product->type) }}" class="btn btn-primary">Leer Mas</a>
         @if($product->user_id === Auth::user()->id)
-        <form action="{{url('eliminar-producto/'.$product->id)}}" method="POST">
+        <form action="{{url('eliminar-producto/'.$product->id)}}" method="POST" class="mt-2">
             @method('DELETE')
             @csrf
             <button type="submit" class="btn btn-danger ">Eliminar producto</button>

@@ -9995,7 +9995,7 @@ button,
 .app-header__logo .logo-src {
     height: 70px;
     width:116px;
-    background: url("../front_page/img/fondo-claro.svg");
+    background: url("../front_page/img/fondo--oscuro.png");
    background-size: auto;
    background-repeat: no-repeat;
    background-position: center;

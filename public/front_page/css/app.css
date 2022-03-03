@@ -10,9 +10,7 @@ transition: background 0.3s, border-radius 0.3s, opacity 0.3s;*/
     box-sizing: border-box;
     font-weight: 300;
 }
-p {
-    text-align: justify;
-}
+
 /*! Guide color */
 :root {
     --primary-color: #2ad2c9;
@@ -42,7 +40,6 @@ body {
     background: var(--background-dark);
     color: var(--text-background-dark);
     font-weight: 100;
-    background-image: url("https://demo.themexbd.com/rtl/alternat/wp-content/uploads/2021/06/share-ico-shape.png");
     background-position: center center;
     background-size: cover;
     opacity: 1;
@@ -67,6 +64,11 @@ body {
     padding-left: 1em;
 }
 /** css banner wefu*/
+.carousel-item{
+    background-position: center;
+    background-size: cover;
+    height:650px
+}
 .banner-wefu .carousel-item {
     position: relative;
 }
@@ -80,7 +82,6 @@ body {
     background-color: rgba(0, 86, 112, 0.3);
 }
 .slider-content {
-    background-image: url("https://demo.themexbd.com/rtl/alternat/wp-content/uploads/2021/06/disti-process-s.png");
     opacity: 1;
     background-size: cover;
     background-position: center;
@@ -142,7 +143,7 @@ h2::before {
     text-align: center;
     border-radius: 5px;
     width: 40px;
-    animation:  3.25s linear infinite;
+    transition: all 0.5;
 }
 /** Estilos de imagenes para los extos */
 .cont-img {
@@ -200,11 +201,7 @@ h2::before {
 }
 /*! Card theme */
 
-.card {
-    background-color: var(--secundary-color);
-    color: var(--text-background-dark);
-    box-shadow: 0px 0px 0px 1.2px var(--text-background-dark);
-}
+
 .asaid-noticias {
     display: flex;
     flex-direction: column;
@@ -218,18 +215,30 @@ h2::before {
     font-weight: 300;
 }
 .card .card-body .card-title {
-    border-bottom: 1px solid var(--text-background-dark);
+    border-bottom: 1px solid var(--background-dark);
+    color: var(--background-dark);
+    font-size:1.5em;
 }
 .card .card-body p {
-    font-size: 0.9em;
+    font-size: 0.97em;
+    color: var(--background-dark);
 }
 .image-card {
     height: 200px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
-
+.card-body{
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.card{
+    border-radius:25px;
+}
 .grid-sizer,
 .grid-item {
     width: 20%;

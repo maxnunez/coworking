@@ -5,5 +5,6 @@
             <button type="submit" class="btn btn-primary">Guardar</button>
             <a href="{{ URL::previous() }}" class="btn btn-danger">Cancelar</a>
         </div>
+
     </div>
 </div>

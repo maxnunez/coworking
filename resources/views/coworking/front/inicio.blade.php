@@ -9,7 +9,7 @@
         <div class="cont-img que_es"></div>
       </div>
       <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
-        <h2 class="text-uppercase font-weight-bold">que es?</h2>
+        <h2 class="text-uppercase font-weight-bold mb-5">que es?</h2>
         <p>
           Es una plataforma donde los usuarios pueden intercambiar bienes y servicios entre sí, pero no se maneja o
           acepta dinero real, en este caso manejaremos el truque. La plataforma permite lograr una comunidad más
@@ -22,7 +22,7 @@
     </div>
     <div class="row py-5 ">
       <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
-        <h2 class="text-uppercase font-weight-bold">como funciona?</h2>
+        <h2 class="text-uppercase font-weight-bold mb-5">como funciona?</h2>
         <p>
           La plataforma cuenta con una técnica de publicaciones en las que cada socio anunciará el bien o servicios
           que está ofertando o que está necesitando y se podrá acceder a la compra o venta de éste por medio de
@@ -43,7 +43,7 @@
         <div class="cont-img noticias"></div>
       </div>
       <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
-        <h2 class="text-uppercase font-weight-bold">noticias</h2>
+        <h2 class="text-uppercase font-weight-bold mb-5">noticias</h2>
         <p>
           En esta sección podemos encontrar información de interés general, relacionada con la plataforma de intercambio
           solidario, es decir que trate temas de consumo responsable, reciclaje y conciencia de consumo, así mismo se
@@ -55,5 +55,5 @@
     </div>
 
   </div>
- 
+
 @endsection
