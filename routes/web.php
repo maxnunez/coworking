@@ -40,8 +40,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Add-Front-Comunidad', 'WebController@addFromComunidad')->name('addfrontcomunidad');
     Route::post('/unirceComunidad', 'WebController@Unircecomunidad');
     Route::get('/Comunidad', 'WebController@Comunidad');
-    Route::delete('/not-change/:id', 'WebController@notChange');
-    Route::delete('/eliminar-producto/:id', 'WebController@eliminarProducto');
+    Route::delete('/not-change/{id}', 'WebController@notChange');
+    Route::delete('/eliminar-producto/{id}', 'WebController@eliminarProducto');
 });
 /**
 

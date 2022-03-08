@@ -3,7 +3,7 @@
 
 {{-- content --}}
 @include('coworking.front.Template.title-page',['title'=>'perfil'])
-
+<div class="container">
   <div class="card p-3 my-3">
     <blockquote class="blockquote mb-0 card-body">
       @if(Auth::user()->avatar)
@@ -40,4 +40,5 @@
 
 <h2 class="d-block">Productos cambiados </h2>
   @include('coworking.front.Template.perfilChange',['items'=>@$changes, 'file'=>'product_images', 'tag'=>'Cambiado'])
+  </div>
 @endsection

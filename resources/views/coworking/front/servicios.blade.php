@@ -3,6 +3,7 @@
 
 {{-- content --}}
 @include('coworking.front.Template.title-page',['title'=>'servicios'])
+
 <div class="container">
 
 <div class="row my-5" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 714px;">

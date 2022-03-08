@@ -3,11 +3,12 @@
 
 {{-- content --}}
 @include('coworking.front.Template.title-page',['title'=>'Crea tu producto o servicio'])
+<div class="container">
 <div class=" row my-5">
 
         {!! Form::open([
         'url' => '/addProduct',
-        'class' => 'form-horizontal mx-auto',
+        'class' => 'form-horizontal mx-auto my-4',
         'files'=>true,
         'redirect'=> url('/'),
         'autocomplete'=>'off'
@@ -101,6 +102,5 @@
     </div>
     {{-- end content --}}
 
-
+</div>
     @endsection
-n

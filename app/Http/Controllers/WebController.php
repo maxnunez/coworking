@@ -212,12 +212,14 @@ class WebController extends Controller
     }
     return redirect('/Comunidad');
   }
+
   public function notChnage($id)
   {
     $changeStatus = Change::find($id);
     $changeStatus->delete();
     return redirect(' /Perfil-User/' . Auth::user()->id);
   }
+
   public function eliminarProducto($id)
   {
     $producto = Product::find($id);

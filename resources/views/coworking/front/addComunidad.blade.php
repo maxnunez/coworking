@@ -3,6 +3,7 @@
 
 {{-- content --}}
 @include('coworking.front.Template.title-page',['title'=>'Unete a la Comunidad'])
+<div class="container">
 <div class=" row my-5">
 
 
@@ -68,5 +69,5 @@
     </div>
     {{-- end content --}}
 
-
+</div>
     @endsection

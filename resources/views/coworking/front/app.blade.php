@@ -20,15 +20,8 @@
 
 <body>
     @include('coworking.front.Template.nav')
-    <div class="container">
         @yield('content')
-    </div>
     @include('coworking.front.Template.footer')
-
-
-
-
-
 
     <script src="{{ asset('front_page/js/jquery.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"

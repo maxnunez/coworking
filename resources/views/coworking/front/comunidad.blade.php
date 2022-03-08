@@ -5,7 +5,7 @@
 @include('coworking.front.Template.title-page',['title'=>'Comunidad'])
 
 
-
+<div class="container">
 {{-- content --}}
 <div class="row my-5" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 714px;">
     @forelse ($users as $item )
@@ -29,7 +29,7 @@ No hay Items ...
 </div>
 {{-- end content --
 
-
+</div>
   {{-- end content --}}
 
 

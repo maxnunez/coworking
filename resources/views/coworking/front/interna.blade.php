@@ -3,6 +3,7 @@
 
 {{-- content --}}
 @include('coworking.front.Template.title-page',['title'=> $item->title])
+<div class="container">
 <div class=" row my-5">
     <div class="col ">
         <div class="card mx-auto my-3 " style="width: 95%;">
@@ -17,6 +18,7 @@
           </div>
         </div>
     </div>
+</div>
 </div>
 {{-- end content --}}
 @endsection

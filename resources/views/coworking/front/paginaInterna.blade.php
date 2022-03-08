@@ -3,7 +3,7 @@
 
 {{-- content --}}
 @include('coworking.front.Template.title-page',['title'=> $product->title])
-
+<div class="container">
 <div class=" row my-5">
 
     <div class="col ">
@@ -20,6 +20,7 @@
         </div>
         @include('coworking.front.Template.interpage', ['items'=> $products ,'tag'=> $product->type])
     </div>
+</div>
 </div>
 {{-- end content --}}
 @endsection

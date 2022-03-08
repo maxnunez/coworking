@@ -1,6 +1,7 @@
 @extends('coworking.front.app')
 @section('content')
 @include('coworking.front.Template.title-page',['title'=>'ayuda e informacion'])
+<div class="container">
 <div class="row my-3">
   @forelse ( $questions as $question)
      <div class="card p-3 my-3">
@@ -16,7 +17,7 @@
   @empty
     no hay preguntas ...
   @endforelse
- 
-</div>
 
+</div>
+</div>
 @endsection
