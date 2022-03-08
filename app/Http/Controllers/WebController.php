@@ -217,13 +217,13 @@ class WebController extends Controller
   {
     $changeStatus = Change::find($id);
     $changeStatus->delete();
-    return redirect(' /Perfil-User/' . Auth::user()->id);
+    return redirect(' Perfil-User/' . Auth::user()->id);
   }
 
   public function eliminarProducto($id)
   {
     $producto = Product::find($id);
     $producto->delete();
-    return redirect(' /Perfil-User/' . Auth::user()->id);
+    return redirect(' Perfil-User/' . Auth::user()->id);
   }
 }
