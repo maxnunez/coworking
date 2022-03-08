@@ -42,6 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Comunidad', 'WebController@Comunidad');
     Route::delete('/not-change/{id}', 'WebController@notChange');
     Route::delete('/eliminar-producto/{id}', 'WebController@eliminarProducto');
+    Route::delete('/eliminar-comunidad/{id}', 'WebController@comunidadDelete');
 });
 /**
 

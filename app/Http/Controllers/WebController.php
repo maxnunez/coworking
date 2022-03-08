@@ -226,4 +226,11 @@ class WebController extends Controller
     $producto->delete();
     return redirect('Perfil-User/' . Auth::user()->id);
   }
+
+  public function comunidadDelete($id)
+  {
+    $userP = PatnerUser::find($id);
+    $userP->delete();
+    return redirect('Comunidad');
+  }
 }
