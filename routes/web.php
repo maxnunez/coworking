@@ -22,8 +22,6 @@ Route::get('login', function () {
 
 //Routes in  web frontend client
 Route::get('/', 'WebController@index')->name('index');
-Route::get('/Servicios', 'WebController@services')->name('servicios');
-Route::get('/Productos', 'WebController@products')->name('productos');
 Route::get('/Ayuda', 'WebController@help')->name('ayuda');
 Route::get('/Blog', 'WebController@blog')->name('blog');
 Route::get('/Noticias', 'WebController@News')->name('noticias');
@@ -32,6 +30,8 @@ Route::get('/Producto-Mas/{id}/{type}', 'WebController@showProduct');
 Route::get('Perfil-Usuario', 'WebController@perfil');
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/Servicios', 'WebController@services')->name('servicios');
+    Route::get('/Productos', 'WebController@products')->name('productos');
     Route::get('/Add-Front-Product', 'WebController@addFrontProduct')->name('addFrontProducto');
     Route::post('/addProduct', 'WebController@addProduct');
     Route::get('/Perfil-User/{id}', 'WebController@getperfil');
