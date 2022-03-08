@@ -2,7 +2,7 @@
 @section('content')
 @include('coworking.front.Template.title-page',['title'=>'ayuda e informacion'])
 <div class="container">
-<div class="row my-3">
+<div class="row my-3 justify-content-around">
   @forelse ( $questions as $question)
      <div class="card p-3 my-3">
     <blockquote class="blockquote mb-0 card-body">
