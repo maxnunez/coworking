@@ -14,20 +14,18 @@
             <div class="card">
                 <img src="{{ asset('img/partnerUser_images/'.$item->url_img) }}" class="rounded mx-auto mt-2"
                     alt="image-perfil" height="80px" width="80px">
-
                 <p class="text-uppercase text-center text-white mt-3 mb-0 p-1" style="background-color:#2ad2c9;">
                     {{ $item->name_complete }}</p>
-                <div class="card-body" style=" overflow-y: scroll;height: 270px;">
-                    <p class="card-text">{!! $item->information !!}</p>
-                </div>
-
                 @if( $item->user_id === Auth::user()->id)
                 <form action="{{url('eliminar-comunidad/'.$item->id )}}" method="POST" class="mt-2">
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="btn btn-danger ">Eliminar producto</button>
+                    <button type="submit" class="btn btn-danger ">Eliminar Usuario de Comunidad</button>
                 </form>
                 @endif
+                <div class="card-body" style=" overflow-y: scroll;height: 270px;">
+                    <p class="card-text">{!! $item->information !!}</p>
+                </div>
             </div>
         </div>
 
