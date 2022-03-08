@@ -28,8 +28,8 @@
                 </a>
               </li>
               <li>
-                <a  href="{{ route('noticias') }}">
-                  Noticias
+                <a  href="{{ route('blog') }}">
+                  Blogs
                 </a>
               </li>
               {{-- <li>
