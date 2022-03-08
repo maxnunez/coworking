@@ -39,9 +39,9 @@
                 </div>
                 <div class="form-group row{{ $errors->has('url_img') ? 'has-error' : ''}}">
                     {{ Form::label('url_img', 'Imagen:', ['class' => 'col-md-4 form-control-label text-md-right']) }}
-                    <div class="col-lg-7">
+                    <div class="col-md-7">
                         @if(isset($blog->url_img) && $blog->url_img != '')
-                        <input type="hidden" name="url_img" value="{{ $blog->url_img }}">
+                        <input type="hidden" name="url_img" value="{{ $blog->url_img }}" style="font-size:14px">
                         <div class="thumb">
                             <img src="{{ url('img/blog_images/'.$blog->url_img) }}" width="200px" />
                         </div>
