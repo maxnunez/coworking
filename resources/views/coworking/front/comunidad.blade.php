@@ -27,7 +27,7 @@ No hay Items ...
 
 
 </div>
-{{-- end content --
+{{-- end content --}}
 
 </div>
   {{-- end content --}}

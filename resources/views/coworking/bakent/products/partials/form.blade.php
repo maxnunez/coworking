@@ -25,7 +25,7 @@
             </div>
             <div class="form-group row{{ $errors->has('url_img') ? 'has-error' : ''}}">
                 {{ Form::label('url_img', 'Imagen:', ['class' => 'col-md-4 form-control-label text-md-right']) }}
-                <div class="col-lg-7">
+                <div class="col-md-7">
                     @if(isset($blog->url_img) && $blog->url_img != '')
                     <input type="hidden" name="url_img" value="{{ $blog->url_img }}">
                     <div class="thumb">
@@ -35,7 +35,7 @@
                     <span class="form-control upload">
                         <i aria-hidden="true" class="fa fa-upload" id="B">
                         </i>
-                        <input accept="image/*" id="input-fileB" name="url_img" type="file" />
+                        <input accept="image/*" id="input-fileB" name="url_img" type="file" class="input-file" />
                     </span>
                     {!! $errors->first('url_img', '
                     <p class="help-block">
