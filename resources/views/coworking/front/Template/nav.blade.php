@@ -17,18 +17,20 @@
                   <a class="nav-link" href="{{ route('ayuda') }}">Ayuda</a>
                   @if(@Auth::user())
                   <div class="btn-group dropleft">
-                      <button type="button" class="btn btn-primary  " data-toggle="dropdown" aria-expanded="false">{{Auth::user()->first_name }}  {{ Auth::user()->last_name }}</button>
+                      <button type="button" class="btn btn-primary  " data-toggle="dropdown"
+                          aria-expanded="false">{{Auth::user()->first_name }} {{ Auth::user()->last_name }}</button>
                       <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{ url('/Perfil-User/'.Auth::user()->id)}}">Perfil</a>
-                        @php $exists = myComunidad(Auth::user()->id)  @endphp
-                        @if(count($exists) != 1 )
+                          @php $exists = myComunidad(Auth::user()->id) @endphp
+                          @if(count($exists) != 1 )
                           <a class="dropdown-item" href="{{route('addfrontcomunidad') }}">Unete a la comunidad</a>
-                         @endif
+                          @endif
                           <a class="dropdown-item" href="{{route('addFrontProducto') }}">Crear Servicio o Producto</a>
-                          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logaut</a>
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logaut</a>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
+                              @csrf
+                          </form>
                       </div>
                   </div>
                   @endif
@@ -48,17 +50,18 @@
           <div class="carousel-inner banner-wefu">
               <div class="carousel-item active" style="background-image: url('{{ asset('front_page/img/1.jpg') }}')">
                   <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
+                      <h5>Una comunidad más receptiva, más humana y colaborativa.</h5>
                   </div>
               </div>
-              <div class="carousel-item" style="background-image: url('{{ asset('front_page/img/2.jpg') }}')">
+              <div class="carousel-item" style="background-image: url('{{ asset('front_page/img/2.png') }}')">
                   <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
+                      <h5>Una comunidad para compartir.
+                          Canjea bienes y servicios, en cualquier lugar y en cualquier momento.</h5>
                   </div>
               </div>
               <div class="carousel-item" style="background-image: url('{{ asset('front_page/img/4.jpg') }}')">
                   <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
+                      <h5>mpieza a Intercambiar. Empieza a compartir. Empieza a marcar la diferencia.</h5>
                   </div>
               </div>
           </div>
