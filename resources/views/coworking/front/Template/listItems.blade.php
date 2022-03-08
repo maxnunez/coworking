@@ -1,4 +1,5 @@
 {{-- content --}}
+<div class="container">
 <div class="row my-5" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 714px;">
     @forelse ($items as $item )
     <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
@@ -19,7 +20,6 @@
 @empty
 No hay Items ...
 @endforelse
-
-
+</div>
 </div>
 {{-- end content --}}

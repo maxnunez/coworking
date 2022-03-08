@@ -242,6 +242,7 @@ h2::before {
 }
 .card{
     border-radius:25px;
+    width: 350px;
 }
 .grid-sizer,
 .grid-item {
