@@ -18,6 +18,7 @@
                     <a href="https://wa.me/{{ $item->user->numero_whatsapp }} target="_blank""
                         class="btn btn-primary">{{$item->user->numero_whatsapp }}</a>
                     @endif
+
                 </div>
 
             </div>

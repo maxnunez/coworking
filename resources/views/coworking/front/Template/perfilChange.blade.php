@@ -18,6 +18,16 @@
                     <a href="https://wa.me/{{ $item->userChange->numero_whatsapp }} target=" _blank""
                         class="btn btn-primary">{{ $item->userChange->numero_whatsapp }}</a>
                     @endif
+
+                    @if( $item->productoChange->user_id === Auth::user()->id)
+                    <form action="{{url('eliminar-producto/'.$item->productoChange->product_change_id )}}" method="POST"
+                        class="mt-2">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-danger ">Eliminar producto</button>
+                    </form>
+
+                    @endif
                 </div>
 
                 @if($item->status === 'pending')

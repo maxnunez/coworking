@@ -8,6 +8,13 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $item->title }}</h5>
                 <p class="card-text">{{ $item->abstract }}</p>
+                @if($item->user_id === Auth::user()->id)
+                <form action="{{url('eliminar-producto/'.$item->id)}}" method="POST" class="mt-2">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-danger ">Eliminar producto</button>
+                </form>
+                @endif
                 <div class="d-block mt-3">
                     <span class="badge badge-info text-capitalize text-white ">{{ $tag }}</span>
                 </div>
@@ -15,9 +22,9 @@
         </div>
     </div>
 
-@empty
-No hay Items ...
-@endforelse
+    @empty
+    No hay Items ...
+    @endforelse
 
 </div>
 {{-- end content --}}
