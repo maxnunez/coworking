@@ -18,6 +18,7 @@ transition: background 0.3s, border-radius 0.3s, opacity 0.3s;*/
 .container{
     margin: 2em auto !important;
 }
+
 /*! Guide color */
 :root {
     --primary-color: #2ad2c9;

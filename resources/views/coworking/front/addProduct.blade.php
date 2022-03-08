@@ -49,7 +49,7 @@
                         <span class="form-control upload">
                             <i aria-hidden="true" class="fa fa-upload" id="B">
                             </i>
-                            <input accept="image/*" id="input-fileB" name="url_img" type="file"  style="font-size:14px"/>
+                            <input class="input-file" accept="image/*" id="input-fileB" name="url_img" type="file"  />
                         </span>
                         {!! $errors->first('url_img', '
                         <p class="help-block">

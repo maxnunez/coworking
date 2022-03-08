@@ -25,4 +25,7 @@
   justify-content:space-around;
   align-items: baseline;
 }
+.input-file{
+  font-size:12.4px;
+}
 }
