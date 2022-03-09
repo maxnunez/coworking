@@ -18,8 +18,8 @@
           <div class="py-3 list-menu">
             <ul >
               <li>
-                <a  href="{{ route('blog') }}">
-                  Blog
+                <a  href="{{ route('/') }}">
+                  Inicio
                 </a>
               </li>
               <li>
@@ -29,7 +29,7 @@
               </li>
               <li>
                 <a  href="{{ route('blog') }}">
-                  Blogs
+                  Blog
                 </a>
               </li>
               {{-- <li>

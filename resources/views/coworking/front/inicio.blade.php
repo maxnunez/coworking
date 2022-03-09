@@ -9,7 +9,7 @@
                 <div class="cont-img que_es"></div>
             </div>
             <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
-                <h2 class="text-uppercase font-weight-bold mb-5">que es?</h2>
+                <h2 class="text-uppercase font-weight-bold mb-5">¿Qué es Wefu Partners?</h2>
                 <p>
                     Es una plataforma donde los usuarios pueden intercambiar bienes y servicios entre sí, pero no se
                     maneja o
@@ -21,30 +21,23 @@
                     el caso
                     de servicios) y lo podemos ofrecer a quien lo necesite.
                 </p>
-                <a class="btn btn-primary">Leer Mas</a>
             </div>
         </div>
     </div>
     <div class="container">
-    <div class="row py-5 ">
+        <div class="row py-5 ">
             <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
                 <h2 class="text-uppercase font-weight-bold mb-5">como funciona?</h2>
                 <p>
-                    La plataforma cuenta con una técnica de publicaciones en las que cada socio anunciará el bien o
-                    servicios
-                    que está ofertando o que está necesitando y se podrá acceder a la compra o venta de éste por medio
-                    de
-                    trueque( cambio de otro bien o servicio.) Las ofertas pueden realizarse cualquier día en la pestaña
-                    que
-                    encontrarán como OFERTAS, estas serán previamente revisadas por el departamento de Coworking con el
-                    fin de
-                    que los bienes o servicios ofertados no afectan o vayan en contra del bienestar de la comunidad,
-                    después de
-                    esta revisión se habilitará la oferta para la comunidad. Es de resaltar que no está permitida la
-                    compra o
-                    venta con dinero real, para ello será utilizado el truque.
+                    La plataforma cuenta con un portafolio de productos o servicios publicados por la comunidad con el
+                    fin de intercambiarlos por otros.
+                    En este espacio promovemos una economía solidaria y circular así que solo están permitidos los
+                    trueques y las donaciones.
+
+                    Todas las publicaciones pasan por un proceso de revisión con el fin de proteger a la comunidad de
+                    ofertas que vayan en contra del bienestar de todos o que incumplan los términos y condiciones
+                    establecidos
                 </p>
-                <a class="btn btn-primary">Leer Mas</a>
             </div>
             <div class="col-sm-12 col-md-6  wow animate__animated animate__fadeInBottomLeft">
                 <div class="cont-img como-funciona"></div>
@@ -52,7 +45,7 @@
         </div>
     </div>
     <div class="container">
-    <div class="row py-5">
+        <div class="row py-5">
             <div class="col-sm-12 col-md-6 wow animate__animated animate__fadeInBottomLeft ">
                 <div class="cont-img noticias"></div>
             </div>
@@ -67,7 +60,6 @@
                     comunidad,
                     turismo, salud, empresas, emprendimiento, entre otras, con enfoque solidario
                 </p>
-                <a class="btn btn-primary">Leer Mas</a>
             </div>
         </div>
     </div>
