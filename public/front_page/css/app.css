@@ -74,10 +74,14 @@ body {
     padding-left: 1em;
 }
 /** css banner wefu*/
+
 .carousel-item{
-    background-position: top center;
+    background-position:center;
     background-size: cover;
     height:350px;
+}
+.carousel-item.carousel-inner--top {
+    background-position: top center;
 }
 .carousel-caption h5 {
     font-size: 25px;
@@ -155,7 +159,7 @@ h2::before {
     width: 40px;
     transition: all 0.5;
 }
-/** Estilos de imagenes para los extos */
+/** Estilos de imagenes para los textos */
 .cont-img {
     width: 100%;
     height: 500px;
