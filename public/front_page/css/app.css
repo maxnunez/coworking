@@ -125,9 +125,6 @@ h2::before {
     left: 10%;
     background-color: var(--primary-color);
 }
-.carousel-caption h5 {
-    font-size: 3em;
-}
 .owl-carousel .item img {
     cursor: pointer;
 }
