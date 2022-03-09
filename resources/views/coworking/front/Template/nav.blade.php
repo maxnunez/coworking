@@ -61,7 +61,7 @@
               </div>
               <div class="carousel-item" style="background-image: url('{{ asset('front_page/img/4.jpg') }}')">
                   <div class="carousel-caption d-block d-md-block">
-                      <h5>Comienza a Intercambiar. Comienza  a compartir. Empieza a marcar la diferencia.</h5>
+                      <h5>Comienza a Intercambiar. Comienza  a compartir. Comienza a marcar la diferencia.</h5>
                   </div>
               </div>
           </div>
