@@ -18,7 +18,7 @@
           <div class="py-3 list-menu">
             <ul >
               <li>
-                <a  href="{{ route('/') }}">
+                <a  href="{{ url('/') }}">
                   Inicio
                 </a>
               </li>
