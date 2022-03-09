@@ -47,8 +47,8 @@
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
           </ol>
-          <div class="carousel-inner carousel-inner--top  banner-wefu">
-              <div class="carousel-item active" style="background-image: url('{{ asset('front_page/img/1.jpg') }}')">
+          <div class="carousel-inner banner-wefu">
+              <div class="carousel-item carousel-inner--top active" style="background-image: url('{{ asset('front_page/img/1.jpg') }}')">
                   <div class="carousel-caption d-block  d-md-block">
                       <h5>Una comunidad más receptiva, más humana y colaborativa.</h5>
                   </div>
