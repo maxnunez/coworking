@@ -1,8 +1,14 @@
 @media screen and (min-width: 810px) {
 	/** css banner wefu*/
 	.banner-wefu .carousel-item img {
-		height: 600px;
+		height: 650px;
 	}
+  .carousel-item {
+      height: 650px;
+  }
+  .carousel-caption h5 {
+      font-size: 3em;
+  }
   .navbar-logo {
   height: 4em;
   padding-left: 2em;

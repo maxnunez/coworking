@@ -49,18 +49,18 @@
           </ol>
           <div class="carousel-inner banner-wefu">
               <div class="carousel-item active" style="background-image: url('{{ asset('front_page/img/1.jpg') }}')">
-                  <div class="carousel-caption d-none d-md-block">
+                  <div class="carousel-caption d-block  d-md-block">
                       <h5>Una comunidad más receptiva, más humana y colaborativa.</h5>
                   </div>
               </div>
               <div class="carousel-item" style="background-image: url('{{ asset('front_page/img/2.png') }}')">
-                  <div class="carousel-caption d-none d-md-block">
+                  <div class="carousel-caption d-block d-md-block">
                       <h5>Una comunidad para compartir.
                           Canjea bienes y servicios, en cualquier lugar y en cualquier momento.</h5>
                   </div>
               </div>
               <div class="carousel-item" style="background-image: url('{{ asset('front_page/img/4.jpg') }}')">
-                  <div class="carousel-caption d-none d-md-block">
+                  <div class="carousel-caption d-block d-md-block">
                       <h5>Comienza a Intercambiar. Empieza a compartir. Empieza a marcar la diferencia.</h5>
                   </div>
               </div>

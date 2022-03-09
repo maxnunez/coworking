@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row py-5 ">
             <div class="col-sm-12 col-md-6 wow animate__animated animate__bounceInRight">
-                <h2 class="text-uppercase font-weight-bold mb-5">como funciona?</h2>
+                <h2 class="text-uppercase font-weight-bold mb-5">¿como funciona?</h2>
                 <p>
                     La plataforma cuenta con un portafolio de productos o servicios publicados por la comunidad con el
                     fin de intercambiarlos por otros.

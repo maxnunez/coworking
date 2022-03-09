@@ -77,7 +77,10 @@ body {
 .carousel-item{
     background-position: center;
     background-size: cover;
-    height:650px
+    height:350px;
+}
+.carousel-caption h5 {
+    font-size: 25px;
 }
 .banner-wefu .carousel-item {
     position: relative;
