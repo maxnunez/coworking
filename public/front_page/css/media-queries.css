@@ -1,10 +1,10 @@
 @media screen and (min-width: 810px) {
 	/** css banner wefu*/
 	.banner-wefu .carousel-item img {
-		height: 650px;
+		height: 680px;
 	}
   .carousel-item {
-      height: 650px;
+      height: 680px;
   }
   .carousel-caption h5 {
       font-size: 3em;
