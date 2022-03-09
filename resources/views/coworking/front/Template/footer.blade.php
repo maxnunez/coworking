@@ -1,9 +1,9 @@
  <!-- end content -->
   <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; right: 19px;"><i class="fa-solid fa-angle-up"></i></a>
   <!-- footer -->
-  <div class="footer py-4">
-    <div class="container">
-      <div class="row align-items-center">
+  <div class="footer my-0 ">
+    <div class="container" style="margin-top:0 !important; margin-bottom:0 !important">
+      <div class="row align-items-center my-0" style="margin-top:0 !important; margin-bottom:0 !important">
         <div class="col-sm-12 col-md-4">
           <div class="logo py-3">
             <img src="{{ asset('front_page/img/fondo-oscuro.png') }}" alt="logo empresarial" height="90px">
