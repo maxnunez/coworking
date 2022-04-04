@@ -10,17 +10,21 @@ transition: background 0.3s, border-radius 0.3s, opacity 0.3s;*/
     box-sizing: border-box;
     font-weight: 300;
 }
-.row{
+
+.row {
     width: 100% !important;
-    margin: 15px  auto !important;
+    margin: 15px auto !important;
 
 }
-.container{
+
+.container {
     margin: 2em auto !important;
 }
+
 .input-file {
     width: 90%;
 }
+
 /*! Guide color */
 :root {
     --primary-color: #2ad2c9;
@@ -29,19 +33,22 @@ transition: background 0.3s, border-radius 0.3s, opacity 0.3s;*/
     --text-color-background-white: #444444;
     --text-background-dark: #ffffff;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 12px;
     background-color: #F5F5F5;
 }
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
     background-color: #CCCCCC;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: var(--primary-color);
-    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
+    background-image: -webkit-linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.4) 50%, transparent, transparent)
 }
 
 body {
@@ -61,6 +68,7 @@ body {
 .bg-dark {
     background-color: var(--secundary-color) !important;
 }
+
 .header .navbar-nav .nav-link {
     font-weight: 500;
     text-align: center;
@@ -73,22 +81,27 @@ body {
     height: 3em;
     padding-left: 1em;
 }
+
 /** css banner wefu*/
 
-.carousel-item{
-    background-position:center;
+.carousel-item {
+    background-position: center;
     background-size: cover;
-    height:350px;
+    height: 350px;
 }
+
 .carousel-item.carousel-inner--top {
     background-position: top center;
 }
+
 .carousel-caption h5 {
     font-size: 25px;
 }
+
 .banner-wefu .carousel-item {
     position: relative;
 }
+
 .banner-wefu .carousel-item::after {
     content: "";
     position: absolute;
@@ -98,28 +111,59 @@ body {
     height: 100%;
     background-color: rgba(0, 86, 112, 0.3);
 }
+
+.banner-home-a {
+    background-color: #33CFCC;
+}
+.banner-home-a h2::before{
+
+    background-color: #00566E;
+}
+.banner-home-b {
+    background-color: #FFF;
+}
+
+.banner-home-b h2,
+.banner-home-b p {
+    color: #00566E;
+}
+
+.banner-home-c {
+    background-color: #00566E;
+}
+
+.row,
+.container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 .slider-content {
     opacity: 1;
     background-size: cover;
     background-position: center;
 }
+
 .banner-wefu .carousel-item img {
     height: 270px;
 }
+
 .content-text p {
     font-size: 1.1em;
-    line-height: 20px;
+    line-height: 1.3em;
     font-weight: 300;
 }
+
 .content-text h2,
 h2 {
     position: relative;
 }
+
 h2 {
     display: inline-block;
     margin: 0 auto;
 }
-.content-text h2::before,
+h2::before,
 h2::before {
     content: " ";
     position: absolute;
@@ -129,6 +173,7 @@ h2::before {
     left: 10%;
     background-color: var(--primary-color);
 }
+
 .owl-carousel .item img {
     cursor: pointer;
 }
@@ -138,6 +183,7 @@ h2::before {
     background-color: var(--primary-color);
     border-color: var(--secundary-color);
 }
+
 .btn-primary:hover,
 .btn-primary:focus {
     color: #fff;
@@ -159,6 +205,7 @@ h2::before {
     width: 40px;
     transition: all 0.5;
 }
+
 /** Estilos de imagenes para los textos */
 .cont-img {
     width: 100%;
@@ -167,15 +214,19 @@ h2::before {
     background-size: cover;
     background-position: top center;
 }
+
 .que_es {
     background-image: url("../img/11.png");
 }
+
 .como-funciona {
     background-image: url("../img/8.png");
 }
+
 .noticias {
     background-image: url("../img/3.png");
 }
+
 .footer {
     background-color: var(--secundary-color);
     color: var(--text-background-dark);
@@ -183,11 +234,13 @@ h2::before {
     line-height: 19px;
     font-size: 0.8em;
 }
+
 .footer .list-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 .footer .list-menu ul li a {
     color: var(--text-background-dark);
     font-weight: 500;
@@ -199,20 +252,24 @@ h2::before {
     cursor: pointer;
     font-size: 1em;
 }
+
 .footer .list-menu ul li a:hover {
     text-decoration: none;
     color: var(--text-background-dark);
 }
+
 .footer-text {
     background-color: var(--text-color-background-white);
     color: var(--text-background-dark);
     font-weight: 400;
     font-size: 0.8em;
 }
+
 .footer-text p {
     margin-bottom: 0;
     text-align: center;
 }
+
 /*! Card theme */
 
 
@@ -220,23 +277,28 @@ h2::before {
     display: flex;
     flex-direction: column;
 }
+
 .conten-products {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .card-body .card-text {
     font-weight: 300;
 }
+
 .card .card-body .card-title {
     border-bottom: 1px solid var(--background-dark);
     color: var(--background-dark);
-    font-size:1.5em;
+    font-size: 1.5em;
 }
+
 .card .card-body p {
     font-size: 0.97em;
     color: var(--background-dark);
 }
+
 .image-card {
     height: 200px;
     background-position: center;
@@ -245,23 +307,28 @@ h2::before {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
-.card-body{
+
+.card-body {
     background-color: white;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
-.card{
-    border-radius:25px;
+
+.card {
+    border-radius: 25px;
     width: 350px;
 }
+
 .grid-sizer,
 .grid-item {
     width: 20%;
 }
+
 /* 2 columns */
 .grid-item--width2 {
     width: 40%;
 }
+
 .bage-question p {
     color: var(--text-background-dark);
     font-weight: 400;
@@ -270,18 +337,21 @@ h2::before {
 .form-group label {
     font-weight: 400;
 }
+
 .ms-selectable .custom-header,
-.ms-selection .custom-header{
-color: var(--text-background-dark);
-font-size: 14px;
-font-weight: bold;
-background-color: var(--background-dark);
-text-align: center;
+.ms-selection .custom-header {
+    color: var(--text-background-dark);
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--background-dark);
+    text-align: center;
 }
+
 .ms-elem-selectable,
-.ms-elem-selection{
+.ms-elem-selection {
     font-weight: bolder;
 }
+
 .btn .btn-inverse,
 .btn .btn-inverse:hover {
     color: var(--text-background-dark) !important;

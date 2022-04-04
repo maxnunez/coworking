@@ -54,7 +54,7 @@ function saveBase64Image($object, $file_input, $folder)
     $imageName = 'img' . $object->id . '_' . getToken(10) . '.' . $type;
 
     file_put_contents(base_path() . "/public/img/" . $folder . "/" . $imageName, $data); //create or open a existing file
-
+    
     return $imageName;
 }
 
@@ -63,7 +63,7 @@ function saveImage($files, $folder)
     $names = [];
     if (is_array($files)) {
         foreach ($files as $file) {
-            if (!file_exists($folder)) {
+            if (!file_exists($fold)) {
                 mkdir($folder);
             }
             $name = 'img' . getToken() . '.' . $file->getClientOriginalExtension();

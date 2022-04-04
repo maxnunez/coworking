@@ -15,7 +15,7 @@
     <link href="{{ asset('multiselect/multi.css') }}" rel="stylesheet">
     <link href="{{ asset('multiselect/theme.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5f6286de45.js" crossorigin="anonymous"></script>
-    <title>wefu</title>
+    <title>WEFU | PARTNERS</title>
 </head>
 
 <body>
@@ -44,6 +44,7 @@
             selectionHeader: "<div class='custom-header'>Seleccionadas</div>",
 
         });
+         $('.ckeditor').ckeditor();
     });
 
 </script>

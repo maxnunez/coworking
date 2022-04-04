@@ -199,8 +199,6 @@ class WebController extends Controller
   public function Unircecomunidad(Request $request)
   {
     $fields = $request->all();
-    // dd($fields);
-
     $comunidad = PatnerUser::createDataWithMedia($fields);
 
     if ($comunidad) {
